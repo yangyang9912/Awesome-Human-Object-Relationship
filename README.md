@@ -39,23 +39,23 @@ This is the repository of **From Visual Gaze to Physical Interaction: A Comprehe
 
 ### Datasets for Gaze Following Estimation
 #### **Dataset Papers:**
-**GazeFollow:** [Where are They Looking?](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf) NIPS 2015
+**GazeFollow:** [Where are They Looking?](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf) *NIPS 2015*
 
-**VideoGaze:** [Following Gaze in Video](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf) ICCV 2017
+**VideoGaze:** [Following Gaze in Video](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf) *ICCV 2017*
 
-**DLGaze:** [Believe It or Not, We Know What You Are Looking at!](https://arxiv.org/pdf/1907.02364) ACCV 2018
+**DLGaze:** [Believe It or Not, We Know What You Are Looking at!](https://arxiv.org/pdf/1907.02364) *ACCV 2018*
 
-**VideoAttentionTarget:** [Detecting Attended Visual Targets in Video](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf) CVPR 2020
+**VideoAttentionTarget:** [Detecting Attended Visual Targets in Video](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf) *CVPR 2020*
 
-**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) CVPRW 2021
+**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) *CVPRW 2021*
 
-**GFIE:** [GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in IndoorEnvironments](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf) CVPR 2023
+**GFIE:** [GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in IndoorEnvironments](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf) *CVPR 2023*
 
-**ChildPlay:** [ChildPlay: A New Benchmark for Understanding Children’s Gaze Behaviour](https://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf) ICCV 2023
+**ChildPlay:** [ChildPlay: A New Benchmark for Understanding Children’s Gaze Behaviour](https://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf) *ICCV 2023*
 
-**VsGaze:** [MTGS: A Novel Framework for Multi-Person Temporal Gaze Following and Social Gaze Prediction](https://openreview.net/pdf?id=ALU676zGFE) NIPS 2024
+**VsGaze:** [MTGS: A Novel Framework for Multi-Person Temporal Gaze Following and Social Gaze Prediction](https://openreview.net/pdf?id=ALU676zGFE) *NIPS 2024*
 
-**GazeHOI:** [Toward Semantic Gaze Target Detection](https://proceedings.neurips.cc/paper_files/paper/2024/file/dbeb7e621d4a554069a6a775da0f7273-Paper-Conference.pdf) NIPS 2024
+**GazeHOI:** [Toward Semantic Gaze Target Detection](https://proceedings.neurips.cc/paper_files/paper/2024/file/dbeb7e621d4a554069a6a775da0f7273-Paper-Conference.pdf) *NIPS 2024*
 
 
 | Dataset  |  Year  |   Modal     | Dimensions | Data size| Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
@@ -74,9 +74,9 @@ This is the repository of **From Visual Gaze to Physical Interaction: A Comprehe
 ### Datasets for Gaze Object Prediction
 
 #### **Dataset Papers:**
-**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) CVPRW 2021
+**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) *CVPRW 2021*
 
-**GESCAM:** [GESCAM : A Dataset and Method on Gaze Estimation for Classroom Attention Measurement](https://openaccess.thecvf.com/content/CVPR2024W/GAZE/papers/Mathew_GESCAM__A_Dataset_and_Method_on_Gaze_Estimation_for_CVPRW_2024_paper.pdf) CVPRW 2024
+**GESCAM:** [GESCAM : A Dataset and Method on Gaze Estimation for Classroom Attention Measurement](https://openaccess.thecvf.com/content/CVPR2024W/GAZE/papers/Mathew_GESCAM__A_Dataset_and_Method_on_Gaze_Estimation_for_CVPRW_2024_paper.pdf) *CVPRW 2024*
 
 | Dataset  |  Year  |   Context     | Data size | Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
 |-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|
@@ -87,11 +87,11 @@ This is the repository of **From Visual Gaze to Physical Interaction: A Comprehe
 ### Datasets for Human Object Interaction Detection
 
 #### **Dataset Papers:**
-**HICO:** [HICO: A Benchmark for Recognizing Human-Object Interactions in Images](https://openaccess.thecvf.com/content_iccv_2015/papers/Chao_HICO_A_Benchmark_ICCV_2015_paper.pdf) ICCV 2015
+**HICO:** [HICO: A Benchmark for Recognizing Human-Object Interactions in Images](https://openaccess.thecvf.com/content_iccv_2015/papers/Chao_HICO_A_Benchmark_ICCV_2015_paper.pdf) *ICCV 2015*
 
-**HICO-Det:** [Learning to Detect Human-Object Interactions](https://arxiv.org/pdf/1702.05448) WACV 2018
+**HICO-Det:** [Learning to Detect Human-Object Interactions](https://arxiv.org/pdf/1702.05448) *WACV 2018*
 
-**V-COCO:** [Visual Semantic Role Labeling](https://arxiv.org/pdf/1505.04474) Arxiv
+**V-COCO:** [Visual Semantic Role Labeling](https://arxiv.org/pdf/1505.04474) *Arxiv*
 
 | Dataset  |  Year | Data size | Training | Validation | Testing | Evaluation Metric  | Project |                              
 |-----------------------------------------------------|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:|
