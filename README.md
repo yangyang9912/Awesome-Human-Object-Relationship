@@ -17,8 +17,10 @@
 - [Performance](#performance)
   - [Gaze Following Estimation](#gaze-following-estimation)
     - [Results on GazeFollow dataset](#results-gazefollow-dataset)
+    - [Results on DLGaze dataset](#results-dlgaze-dataset)
     - [Results on VideoAttentionTarget dataset](#results-videoattentiontarget-dataset)
     - [Results on ChildPlay dataset](#results-childplay-dataset)
+    - [Results on GOO dataset](#results-goo-dataset)
   - [Gaze Object Prediction](#gaze-object-prediction)
     - [Results on GOO dataset](#results-goo-dataset)
   - [Human Object Interaction Detection](#human-object-interaction-detection)
@@ -36,6 +38,7 @@
 |[VideoGaze](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf)|2017|RGB|2D| 140 movies |120 movies | - | 20 movies| AUC, Min Dist., Dist., KL, AP | head box, outside gaze point| [Project](http://videogazefollow.csail.mit.edu/)|
 |[DLGaze](https://arxiv.org/pdf/1907.02364)|2018|RGB|2D| 95,000 |- | - | - | AUC, L2 Dist., Ang. | head box, gaze point| [Project](https://github.com/svip-lab/GazeFollowing)|
 |[VideoAttentionTarget](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2020|RGB|2D| 50 videos |- | - | - | AUC, L2 Dist., AP | head box, gaze point, inside/outside| [Project](https://github.com/ejcgt/attention-target-detection)|
+|[GOO](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2021|RGB|2D| GOO-Synth:192000; GOO-Real:9552 |- | - | - | AUC, L2 Dist., Ang. | head box, eye location, 2D gaze point, object box, gaze object box, segmentation mask| [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file)|
 |[GFIE](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 71,799 | 59,217 | 6,281 | 6,281 | AUC, L2 Dist., 3D Dist., 3D Ang. | head box, 2D gaze point, 3D gaze point| [Project](https://sites.google.com/view/gfie)|
 |[ChildPlay](hhttps://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 120,549 | -| - | - | AUC, Dist., AP, P.Head | head box, gaze point, gaze class (Is it the head?)| [Project](https://www.idiap.ch/en/dataset/)|
 |[VsGaze](https://openreview.net/pdf?id=ALU676zGFE)|2024|RGB|2D| - | -| - | - | Dist., AP_IO_, F1_LAH, F1_LAEO, AP_SA | head box, gaze point, gaze communication classification label| -|
@@ -73,6 +76,7 @@
 |[Multi-Person Gaze-Following with Numerical Coordinate Regression](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9666980)|FG 2021|[Code](https://github.com/moshuilanting/multi-person-gaze-following)|
 |[End-to-End Human-Gaze-Target Detection with Transformers](https://openaccess.thecvf.com/content/CVPR2022/papers/Tu_End-to-End_Human-Gaze-Target_Detection_With_Transformers_CVPR_2022_paper.pdf)|CVPR 2022|-|
 |[Un-Gaze: A Unified Transformer for Joint Gaze-Location and Gaze-Object Detection](https://ieeexplore.ieee.org/document/10262016)|TCSVT 2023|-|
+|[Dual Regression-Enhanced Gaze Target Detection in the Wild](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10056400)|TCYB 2024|-|
 |[Sharingan: A Transformer Architecture for Multi-Person Gaze Following](https://openaccess.thecvf.com/content/CVPR2024/papers/Tafasca_Sharingan_A_Transformer_Architecture_for_Multi-Person_Gaze_Following_CVPR_2024_paper.pdf)|CVPR 2024|[Code](https://github.com/idiap/sharingan)|
 |[Gaze Target Detection Based on Head-Local-Global Coordination](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03933.pdf)|ECCV 2024|-|
 |[GazeHTA: End-to-end Gaze Target Detection with Head-Target Association](https://arxiv.org/pdf/2404.10718)|Arxiv 2024|-|
@@ -211,6 +215,7 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[MMSF](https://openreview.net/pdf?id=rtdn6GHiLo)|NIPS Gaze Workshop 2023|ResNet-50/ResNet-50|CNN|I+D|✔|0.932|0.073|0.133|-| -|
 |[Un-Gaze](https://openreview.net/pdf?id=rtdn6GHiLo)|TCSVT 2023|ResNet-50/-|Transformer|I|✔|0.928|0.057|0.114|-| -|
 |[Un-Gaze](https://openreview.net/pdf?id=rtdn6GHiLo)|TCSVT 2023|ResNet-101/-|Transformer|I|✔|0.925|0.064|0.116|-| -|
+|[Wang](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10056400)|TCYB 2024|ResNet-50/ResNet-50|CNN|I|✘|-|0.074|0.120|13.5| 61M|
 |[Yang](https://eccv.ecva.net/virtual/2024/poster/1131)|ECCV 2024|ResNet-50/ResNet-50|CNN|I|✘|0.939|0.059|0.114|12.4|-|
 |[Yang](https://ojs.aaai.org/index.php/AAAI/article/view/28480)|AAAI 2024|ResNet-50/ResNet-50|CNN|I+O+P|✘|-|0.061|0.118|-|-|
 |[Depth Matters](https://dl.acm.org/doi/10.1145/3689643)|TOMM 2024|ResNet-50/ResNet-50|CNN|I|✘|0.927|0.075|0.132|16.7|-|
@@ -222,6 +227,17 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[Tafasca](https://openreview.net/pdf?id=BAmAFraxvf)|NIPS 2024|ViT/ResNet-18|Transformer|I|✔|-|0.051|0.108|-|-|
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-B/-|Transformer|I|✔|0.956|0.045|0.104|-|86M+2.8M|
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-L/-|Transformer|I|✔|0.958|0.041|0.099|-|307M+2.8M|
+
+#### Results on DLGaze dataset
+##### Trained on GazeFollow, test on DLGaze
+| Method|  Published in | Backbone(Scene/Head)| CNN/Transformer|Modality|Multi-Person |AUC↑ | L2 Dist.↓ | Ang.↓|Param.|                               
+|-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[GazeFollow](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf)|NIPS 2015|Alexnet/Alexnet|CNN|I|✘|-|0.169|21.4|50M*|
+|[Lian](https://arxiv.org/pdf/1907.02364)|ACCV 2018|ResNet-50/ResNet-50|CNN|I|✘|-|0.157|18.7|55M|
+|[HGTTR](https://arxiv.org/pdf/2203.10433)|CVPR 2022|ResNet-50/-|Transformer|I|✔ |0.912|0.121|12.7| 43M|
+|[Un-Gaze](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10262016)|TCSVT 2023|ResNet-50/-|Transformer|I|✔|0.938|0.112|11.8| -|
+|[Wang](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10056400)|TCYB 2024|ResNet-50/ResNet-50|CNN|I|✘|-|0.126|14.6| 61M|
+
 
 #### Results on VideoAttentionTarget dataset
 
@@ -248,8 +264,9 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[Tonini](https://openaccess.thecvf.com/content/ICCV2023/papers/Tonini_Object-aware_Gaze_Target_Detection_ICCV_2023_paper.pdf)|ICCV 2023|ResNet-50/-|Transformer|I+O||0.923|0.102|0.944| 54M|
 |[Tonini](https://openaccess.thecvf.com/content/ICCV2023/papers/Tonini_Object-aware_Gaze_Target_Detection_ICCV_2023_paper.pdf)|ICCV 2023|ResNet-50/-|Transformer|I+D+O|✔|0.933|0.104|0.934| 54M|
 |[MMSF](https://openreview.net/pdf?id=rtdn6GHiLo)|NIPS Gaze Workshop 2023|ResNet-50/ResNet-50|CNN|I+D|✔|0.964|0.100|-| -|
-|[Un-Gaze](https://openreview.net/pdf?id=rtdn6GHiLo)|TCSVT 2023|ResNet-50/-|Transformer|I|✔|0.925|0.093|0.923| -|
-|[Un-Gaze](https://openreview.net/pdf?id=rtdn6GHiLo)|TCSVT 2023|ResNet-101/-|Transformer|I|✔|0.936|0.095|0.927| -|
+|[Un-Gaze](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10262016)|TCSVT 2023|ResNet-50/-|Transformer|I|✔|0.925|0.093|0.923| -|
+|[Un-Gaze](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10262016)|TCSVT 2023|ResNet-101/-|Transformer|I|✔|0.936|0.095|0.927| -|
+|[Wang](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10056400)|TCYB 2024|ResNet-50/ResNet-50|CNN|I|✘|-|0.128|0.834| 61M|
 |[Yang](https://eccv.ecva.net/virtual/2024/poster/1131)|ECCV 2024|ResNet-50/ResNet-50|CNN|I|✘|0.920|0.101|0.916|-|
 |[Yang](https://ojs.aaai.org/index.php/AAAI/article/view/28480)|AAAI 2024|ResNet-50/ResNet-50|CNN|I+O+P|✘|-|0.106|0.910|-|
 |[Depth Matters](https://dl.acm.org/doi/10.1145/3689643)|TOMM 2024|ResNet-50/ResNet-50|CNN|I|✘|0.882|0.130|0.857|-|
@@ -261,6 +278,29 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-B/-|Transformer|I|✔|0.933|0.107|0.897|86M+2.8M|
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-L/-|Transformer|I|✔|0.937|0.103|0.903|307M+2.8M|
 
+
+#### Results on GOO dataset
+#### GOO-Synth dataset
+| Method|  Published in | Backbone(Scene/Head)| CNN/Transformer|Modality|Multi-Person |AUC↑ | L2 Dist.↓ | Ang.↓|Param.|                               
+|-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[GazeFollow](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf)|NIPS 2015|ResNet-50/ResNet-50|CNN|I|✘|0.929|0.162|33.0|51M*|
+|[Lian](https://arxiv.org/pdf/1907.02364)|ACCV 2018|ResNet-50/ResNet-50|CNN|I|✘|0.954|0.107|19.7|55M|
+|[Chong-2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|CVPR 2020|ResNet-50/ResNet-50|CNN|I+T|✘|0.952|0.075|15.1|61M|
+|[Un-Gaze](https://ieeexplore.ieee.org/document/10262016)|CVPR 2020|ResNet-50/ResNet-50|Transformer|I|✔|0.962|0.068|14.2|-|
+|[Un-Gaze](https://ieeexplore.ieee.org/document/10262016)|CVPR 2020|ResNet-101/ResNet-50|Transformer|I|✔|0.953|0.070|14.8|-|
+
+#### GOO-Real dataset (Pretraining on GOO-Synth dataset)
+| Method|  Published in | Backbone(Scene/Head)| CNN/Transformer|Modality|Multi-Person |AUC↑ | L2 Dist.↓ | Ang.↓|Param.|                               
+|-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[GazeFollow](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf)|NIPS 2015|ResNet-50/ResNet-50|CNN|I|✘|0.903|0.195|39.8|51M*|
+|[Lian](https://arxiv.org/pdf/1907.02364)|ACCV 2018|ResNet-50/ResNet-50|CNN|I|✘|0.890|0.168|32.6|55M|
+|[Chong-2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|CVPR 2020|ResNet-50/ResNet-50|CNN|I+T|✘|0.889|0.150|29.1|61M|
+|[TONINI](https://dl.acm.org/doi/10.1145/3536221.3556624)|ICMI 2022|ResNet-50/ResNet-50|CNN|I|✘|0.918|0.164|-|92M|
+|[MMSF](https://openreview.net/pdf?id=rtdn6GHiLo)|NIPS Gaze Workshop 2023|ResNet-50/ResNet-50|CNN|I+D|✘|0.954|0.130|-|-|
+|[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-B/-|Transformer|I|✔|0.901|0.174|-|86M+2.8M|
+|[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-L/-|Transformer|I|✔|0.898|0.175|-|307M+2.8M|
+
+
 #### Results on ChildPlay dataset
 
 | Method|  Published in | Backbone(Scene/Head)| CNN/Transformer|Modality|Multi-Person |AUC↑ | Dist.↓ | AP↑|P.Head↑ |Param.|                               
@@ -271,3 +311,21 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-B/-|Transformer|I|✔|0.949|0.106|0.994|0.715|86M+2.8M|
 |[GazeLLE](https://arxiv.org/pdf/2412.09586)|CVPR 2025|ViT-L/-|Transformer|I|✔|0.951|0.101|0.994|0.662|307M+2.8M|
 
+
+### Gaze Object Prediction
+#### Results on GOO dataset
+##### GOO-Synth dataset
+| Method|  Published in |Head free|Detection|Segmentation|AUC↑ | Dist.↓ | Ang.↓|mSoC↑ |AP↑ |Param.|                               
+|-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[GaTector](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_GaTector_A_Unified_Framework_for_Gaze_Object_Prediction_CVPR_2022_paper.pdf)|CVPR 2022|✘|✔|✘|0.957|0.073|14.9|67.9|-|61M|
+|[TransGOP](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|AAAI 2024|✘|✔|✘|0.963|0.079|13.3|92.8|87.6|94M|
+|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✘|0.938|0.091|18.9|90.8|87.6|84M|
+|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✔|0.938|0.091|18.9|82.7|78.6|84M|
+
+##### GOO-Real dataset
+| Method|  Published in |Head free|Detection|Segmentation|AUC↑ | Dist.↓ | Ang.↓|mSoC↑ |AP↑ |Param.|                               
+|-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
+|[GaTector](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_GaTector_A_Unified_Framework_for_Gaze_Object_Prediction_CVPR_2022_paper.pdf)|CVPR 2022|✘|✔|✘|0.927|0.196|29.5|-|52.3|61M|
+|[TransGOP](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|AAAI 2024|✘|✔|✘|0.947|0.097|16.7|82.6|84.1|94M|
+|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✘|0.943|0.088|14.7|81.4|77.2|84M|
+|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✔|0.943|0.088|14.7|85.9|82.9|84M|
