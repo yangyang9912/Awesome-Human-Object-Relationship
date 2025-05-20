@@ -222,8 +222,9 @@ This is the repository of **From Visual Gaze to Physical Interaction: A Comprehe
 ### Gaze Following Estimation
 #### Results on GazeFollow dataset
 
-##### Modality:
-I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
+**Modality:**
+
+**I**: RGB Image; **D**: Depth; **T**: Temporal; **O**: Object; **P**: Posture; E: Eye
 
 | Method|  Published in | Backbone(Scene/Head)| CNN/Transformer|Modality|Multi-Person |AUC↑ | Min Dist.↓ | Avg Dist.↓| Ang.↓| Param.|                               
 |-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
