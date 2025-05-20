@@ -29,6 +29,17 @@
 
 ### Datasets for Gaze Following Estimation
 
+| Dataset  |  Year  |   Modal     | Dimensions | Data size| Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
+|-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|:------------:|
+|[GazeFollow](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf)|2015|RGB|2D|126,925 |122,143 | - | 4782 | AUC, Min Dist., Avg Dist. | head box, body box, eye location, 2D gaze point, inside/outside| [Project](http://gazefollow.csail.mit.edu/)|
+|[VideoGaze](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf)|2017|RGB|2D| 140 movies |120 movies | - | 20 movies| AUC, Min Dist., Dist., KL, AP | head box, outside gaze point| [Project](http://videogazefollow.csail.mit.edu/)|
+|[DLGaze](https://arxiv.org/pdf/1907.02364)|2018|RGB|2D| |95,000 | - | - | AUC, L2 Dist., Ang. | head box, gaze point| [Project](https://github.com/svip-lab/GazeFollowing)|
+|[VideoAttentionTarget](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2020|RGB|2D| |50 videos | - | - | AUC, L2 Dist., AP | head box, gaze point, inside/outside| [Project](https://github.com/ejcgt/attention-target-detection)|
+|[GFIE](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 71,799 | 59,217 | 6,281 | 6,281 | AUC, L2 Dist., 3D Dist., 3D Ang. | head box, 2D gaze point, 3D gaze point| [Project](https://sites.google.com/view/gfie)|
+|[ChildPlay](hhttps://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 120,549 | -| - | - | AUC, Dist., AP, P.Head | head box, gaze point, gaze class (Is it the head?)| [Project](https://github.com/idiap/geomgaze)|
+|[VsGaze](https://openreview.net/pdf?id=ALU676zGFE)|2024|RGB|2D| - | -| - | - | Dist., AP_IO_, F1_LAH, F1_LAEO, AP_SA | head box, gaze point, gaze communication classification label| -|
+|[GazeHOI](https://proceedings.neurips.cc/paper_files/paper/2024/file/dbeb7e621d4a554069a6a775da0f7273-Paper-Conference.pdf)|2024|RGB|2D| 43,808 | -| - | - | GazeAcc, Acc@1, Acc@3 | person box, object box, object class and interaction verb| -|
+
 
 ### Datasets for Gaze Object Prediction
 
@@ -109,11 +120,51 @@
 |[No-Frills Human-Object Interaction Detection: Factorization, Layout Encodings, and Training Techniques](https://openaccess.thecvf.com/content_ICCV_2019/papers/Gupta_No-Frills_Human-Object_Interaction_Detection_Factorization_Layout_Encodings_and_Training_Techniques_ICCV_2019_paper.pdf)|ICCV 2019|[Code](https://github.com/BigRedT/no_frills_hoi_det)/[Project](https://tanmaygupta.info/no_frills/)|
 |[VSGNet: Spatial Attention Network for Detecting Human Object Interactions Using Graph Convolutions](https://openaccess.thecvf.com/content_CVPR_2020/papers/Ulutan_VSGNet_Spatial_Attention_Network_for_Detecting_Human_Object_Interactions_Using_CVPR_2020_paper.pdf)|CVPR 2020|[Code](https://github.com/ASMIftekhar/VSGNet)|
 |[Amplifying Key Cues for Human-Object-Interaction Detection](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590239.pdf)|ECCV 2020|-|
+|[Detecting Human-Object Interactions with Action Co-occurrence Priors](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123660715.pdf)|ECCV 2020|[Code](https://github.com/Dong-JinKim/ActionCooccurrencePriors/)|
+|[Polysemy Deciphering Network for Human-Object Interaction Detection](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123650069.pdf)|ECCV 2020|[Code](https://github.com/MuchHair/PD-Net)|
+|[Detailed 2D-3D Joint Representation for Human-Object Interaction](https://openaccess.thecvf.com/content_CVPR_2020/papers/Li_Detailed_2D-3D_Joint_Representation_for_Human-Object_Interaction_CVPR_2020_paper.pdf)|CVPR 2020|[Code](https://github.com/DirtyHarryLYL/DJ-RN)|
+|[HOI Analysis: Integrating and Decomposing Human-Object Interaction](https://proceedings.nips.cc/paper_files/paper/2020/file/3493894fa4ea036cfc6433c3e2ee63b0-Paper.pdf)|NIPS 2020|[Code](https://github.com/DirtyHarryLYL/DJ-RN)|
+|[Exploiting Scene Graphs for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/ICCV2021/papers/He_Exploiting_Scene_Graphs_for_Human-Object_Interaction_Detection_ICCV_2021_paper.pdf)|ICCV 2021|[Code](https://github.com/ht014/SG2HOI)|
+|[Spatially Conditioned Graphs for Detecting Human–Object Interactions](https://openaccess.thecvf.com/content/ICCV2021/papers/Zhang_Spatially_Conditioned_Graphs_for_Detecting_Human-Object_Interactions_ICCV_2021_paper.pdf)|ICCV 2021|[Code](https://github.com/fredzzhang/spatially-conditioned-graphs)|
+|[Affordance Transfer Learning for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2021/papers/Hou_Affordance_Transfer_Learning_for_Human-Object_Interaction_Detection_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/zhihou7/HOI-CL)|
+|[Efficient Two-Stage Detection of Human–Object Interactions with a Novel Unary–Pairwise Transformer](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhang_Efficient_Two-Stage_Detection_of_Human-Object_Interactions_With_a_Novel_Unary-Pairwise_CVPR_2022_paper.pdf)|CVPR 2022|[Code](https://github.com/fredzzhang/upt)/[Project](https://fredzzhang.com/unary-pairwise-transformers/)|
+
 
 #### One Stage Methods
 
-
-
+| Paper                                             |  Published in | Code/Project |                                  
+|---------------------------------------------------|:-------------:|:------------:|
+|[UnionDet: Union-Level Detector Towards Real-Time Human-Object Interaction Detection](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600494.pdf)|ECCV 2020|-|
+|[Learning Human-Object Interaction Detection using Interaction Points](https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Learning_Human-Object_Interaction_Detection_Using_Interaction_Points_CVPR_2020_paper.pdf)|CVPR 2020|[Code](https://github.com/vaesl/IP-Net)|
+|[PPDM: Parallel Point Detection and Matching for Real-time Human-Object Interaction Detection](https://openaccess.thecvf.com/content_CVPR_2020/papers/Liao_PPDM_Parallel_Point_Detection_and_Matching_for_Real-Time_Human-Object_Interaction_CVPR_2020_paper.pdf)|CVPR 2020|[Code](https://github.com/YueLiao/PPDM)|
+|[PPDM: Parallel Point Detection and Matching for Real-time Human-Object Interaction Detection](https://ieeexplore.ieee.org/document/9552553)|TIP 2021|-|
+|[End-to-End Human Object Interaction Detection with HOI Transformer](https://openaccess.thecvf.com/content/CVPR2021/papers/Zou_End-to-End_Human_Object_Interaction_Detection_With_HOI_Transformer_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/bbepoch/HoiTransformer)|
+|[HOTR: End-to-End Human-Object Interaction Detection with Transformers](https://openaccess.thecvf.com/content/CVPR2021/papers/Kim_HOTR_End-to-End_Human-Object_Interaction_Detection_With_Transformers_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/kakaobrain/hotr)|
+|[Glance and Gaze: Inferring Action-aware Points for One-Stage Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2021/papers/Zhong_Glance_and_Gaze_Inferring_Action-Aware_Points_for_One-Stage_Human-Object_Interaction_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/SherlockHolmes221/GGNet)|
+|[Visual Relationship Detection Using Part-and-Sum Transformers with Composite Queries](https://openaccess.thecvf.com/content/ICCV2021/papers/Dong_Visual_Relationship_Detection_Using_Part-and-Sum_Transformers_With_Composite_Queries_ICCV_2021_paper.pdf)|ICCV 2021|-|
+|[Reformulating HOI Detection as Adaptive Set Prediction](https://openaccess.thecvf.com/content/CVPR2021/papers/Chen_Reformulating_HOI_Detection_As_Adaptive_Set_Prediction_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/yoyomimi/AS-Net)|
+|[QPIC: Query-Based Pairwise Human-Object Interaction Detection with Image-Wide Contextual Information](https://openaccess.thecvf.com/content/CVPR2021/papers/Tamura_QPIC_Query-Based_Pairwise_Human-Object_Interaction_Detection_With_Image-Wide_Contextual_Information_CVPR_2021_paper.pdf)|CVPR 2021|[Code](https://github.com/hitachi-rd-cv/qpic)|
+|[Mining the Benefits of Two-stage and One-stage HOI Detection](https://proceedings.neurips.cc/paper/2021/file/8f1d43620bc6bb580df6e80b0dc05c48-Paper.pdf)|NIPS 2021|[Code](https://github.com/YueLiao/CDN)|
+|[MSTR: Multi-Scale Transformer for End-to-End Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2022/papers/Kim_MSTR_Multi-Scale_Transformer_for_End-to-End_Human-Object_Interaction_Detection_CVPR_2022_paper.pdf)|CVPR 2022|-|
+|[Human-Object Interaction Detection via Disentangled Transformer](https://openaccess.thecvf.com/content/CVPR2022/papers/Zhou_Human-Object_Interaction_Detection_via_Disentangled_Transformer_CVPR_2022_paper.pdf)|CVPR 2022|-|
+|[Iwin: Human-Object Interaction Detection via Transformer with Irregular Windows](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136640085.pdf)|ECCV 2022|-|
+|[GEN-VLKT: Simplify Association and Enhance Interaction Understanding for HOI Detection](https://openaccess.thecvf.com/content/CVPR2022/papers/Liao_GEN-VLKT_Simplify_Association_and_Enhance_Interaction_Understanding_for_HOI_Detection_CVPR_2022_paper.pdf)|CVPR 2022|[Code](https://github.com/YueLiao/gen-vlkt)|
+|[FGAHOI: Fine-Grained Anchors for Human-Object Interaction Detection](https://ieeexplore.ieee.org/document/10315071)|TPAMI 2023|[Code](https://github.com/xiaomabufei/FGAHOI)|
+|[Relational Context Learning for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2023/papers/Kim_Relational_Context_Learning_for_Human-Object_Interaction_Detection_CVPR_2023_paper.pdf)|CVPR 2023|[Code](https://github.com/OreoChocolate/MUREN)/[Project](http://cvlab.postech.ac.kr/research/MUREN/)|
+|[HOICLIP: Efficient Knowledge Transfer for HOI Detection with Vision-Language Models](https://openaccess.thecvf.com/content/CVPR2023/papers/Ning_HOICLIP_Efficient_Knowledge_Transfer_for_HOI_Detection_With_Vision-Language_Models_CVPR_2023_paper.pdf)|CVPR 2023|[Code](https://github.com/Artanic30/HOICLIP)|
+|[Point-Based Learnable Query Generator for Human–Object Interaction Detection](https://ieeexplore.ieee.org/document/10328553)|TIP 2023|-|
+|[Toward a Unified Transformer-Based Framework for Scene Graph Generation and Human-Object Interaction Detection](https://ieeexplore.ieee.org/document/10315051)|TIP 2023|-|
+|[Exploring Predicate Visual Context in Detecting of Human–Object Interactions](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_Exploring_Predicate_Visual_Context_in_Detecting_of_Human-Object_Interactions_ICCV_2023_paper.pdf)|ICCV 2023|[Code](https://github.com/fredzzhang/pvic)|
+|[RLIPv2: Fast Scaling of Relational Language-Image Pre-training](https://openaccess.thecvf.com/content/ICCV2023/papers/Yuan_RLIPv2_Fast_Scaling_of_Relational_Language-Image_Pre-Training_ICCV_2023_paper.pdf)|ICCV 2023|[Code](https://github.com/JacobYuan7/RLIPv2)|
+|[Category Query Learning for Human-Object Interaction Classification](https://openaccess.thecvf.com/content/CVPR2023/papers/Xie_Category_Query_Learning_for_Human-Object_Interaction_Classification_CVPR_2023_paper.pdf)|CVPR 2023|[Code](https://github.com/charles-xie/CQL)|
+|[ViPLO: Vision Transformer based Pose-Conditioned Self-Loop Graph for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2023/papers/Park_ViPLO_Vision_Transformer_Based_Pose-Conditioned_Self-Loop_Graph_for_Human-Object_Interaction_CVPR_2023_paper.pdf)|CVPR 2023|[Code](https://github.com/Jeeseung-Park/ViPLO)|
+|[Agglomerative Transformer for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/ICCV2023/papers/Tu_Agglomerative_Transformer_for_Human-Object_Interaction_Detection_ICCV_2023_paper.pdf)|ICCV 2023|[Code](https://github.com/six6607/AGER)|
+|[Re-mine, Learn and Reason: Exploring the Cross-modal Semantic Correlations for Language-guided HOI detection](https://openaccess.thecvf.com/content/ICCV2023/papers/Cao_Re-mine_Learn_and_Reason_Exploring_the_Cross-modal_Semantic_Correlations_for_ICCV_2023_paper.pdf)|ICCV 2023|-|
+|[Re-mine, Learn and Reason: Exploring the Cross-modal Semantic Correlations for Language-guided HOI detection](https://openaccess.thecvf.com/content/ICCV2023/papers/Lei_Efficient_Adaptive_Human-Object_Interaction_Detection_with_Concept-guided_Memory_ICCV_2023_paper.pdf)|ICCV 2023|[Code](https://github.com/ltttpku/ADA-CM)|
+|[TED-Net: Dispersal Attention for Perceiving Interaction Region in Indirectly-Contact HOI Detection](https://ieeexplore.ieee.org/document/10415065)|TCSVT 2024|[Code](https://drliuqi.github.io/)|
+|[Disentangled Pre-training for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2024/papers/Li_Disentangled_Pre-training_for_Human-Object_Interaction_Detection_CVPR_2024_paper.pdf)|CVPR 2024|[Code](https://github.com/xingaoli/DP-HOI)|
+|[Human-Object Interaction Detection Collaborated with Large Relation-driven Diffusion Models](https://proceedings.neurips.cc/paper_files/paper/2024/file/2a54def490213ee10631b991c5acc6b5-Paper-Conference.pdf)|NIPS 2024|[Code](https://github.com/0liliulei/DiffusionHOI)|
+|[Orchestrating the Symphony of Prompt Distribution Learning for Human-Object Interaction Detection](https://ojs.aaai.org/index.php/AAAI/article/view/32412/34567)|AAAI 2025|-|
 
 
 
