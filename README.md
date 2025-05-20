@@ -360,16 +360,20 @@ This is the repository of **From Visual Gaze to Physical Interaction: A Comprehe
 |-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 |[GaTector](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_GaTector_A_Unified_Framework_for_Gaze_Object_Prediction_CVPR_2022_paper.pdf)|CVPR 2022|✘|✔|✘|0.957|0.073|14.9|67.9|-|61M|
 |[TransGOP](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|AAAI 2024|✘|✔|✘|0.963|0.079|13.3|92.8|87.6|94M|
-|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✘|0.938|0.091|18.9|90.8|87.6|84M|
-|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✔|0.938|0.091|18.9|82.7|78.6|84M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✘|✔|✘|0.947|0.072|14.8|91.2|88.3|81M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✘|✘|✔|0.947|0.072|14.8|82.7|79.3|81M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✔|✔|✘|0.938|0.091|18.9|90.8|87.6|84M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✔|✔|✔|0.938|0.091|18.9|82.7|78.6|84M|
 
 ##### GOO-Real dataset
 | Method|  Published in |Head free|Detection|Segmentation|AUC↑ | Dist.↓ | Ang.↓|mSoC↑ |AP↑ |Param.|                               
 |-------------|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|:------------:|
 |[GaTector](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_GaTector_A_Unified_Framework_for_Gaze_Object_Prediction_CVPR_2022_paper.pdf)|CVPR 2022|✘|✔|✘|0.927|0.196|29.5|-|52.3|61M|
 |[TransGOP](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|AAAI 2024|✘|✔|✘|0.947|0.097|16.7|82.6|84.1|94M|
-|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✘|0.943|0.088|14.7|81.4|77.2|84M|
-|[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✔|0.943|0.088|14.7|85.9|82.9|84M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✘|✔|✘|0.943|0.078|12.9|81.8|77.3|81M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✘|✘|✔|0.943|0.078|12.9|86.4|82.9|81M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✔|✔|✘|0.943|0.088|14.7|81.4|77.2|84M|
+|[Jin](https://link.springer.com/chapter/10.1007/978-3-031-72890-7_23)|ECCV 2024|✔|✔|✔|0.943|0.088|14.7|85.9|82.9|84M|
 
 
 ### Human-Object Interaction Detection
