@@ -1,5 +1,12 @@
 ## Awesome Human-Object Relationship Understanding [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
+This is the repository of **From Visual Gaze to Physical Interaction: A Comprehensive Survey on Human-Object Relationship Understanding**, a systematic survey of Human-Object Relationship Understanding, including gaze following estimation, gaze object prediction, and human-object interaction detection.
+
+------
+
+**<u>Contact jin91999@gmail.com if any paper is missed!</u>**
+
+------
 
 ## Menu
 - [Datasets](#datasets)
@@ -31,6 +38,25 @@
 ## Datasets
 
 ### Datasets for Gaze Following Estimation
+#### **Dataset Papers:**
+**GazeFollow:** [Where are They Looking?](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf) NIPS 2015
+
+**VideoGaze:** [Following Gaze in Video](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf) ICCV 2017
+
+**DLGaze:** [Believe It or Not, We Know What You Are Looking at!](https://arxiv.org/pdf/1907.02364) ACCV 2018
+
+**VideoAttentionTarget:** [Detecting Attended Visual Targets in Video](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf) CVPR 2020
+
+**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) CVPRW 2021
+
+**GFIE:** [GFIE: A Dataset and Baseline for Gaze-Following from 2D to 3D in IndoorEnvironments](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf) CVPR 2023
+
+**ChildPlay:** [ChildPlay: A New Benchmark for Understanding Children’s Gaze Behaviour](https://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf) ICCV 2023
+
+**VsGaze:** [MTGS: A Novel Framework for Multi-Person Temporal Gaze Following and Social Gaze Prediction](https://openreview.net/pdf?id=ALU676zGFE) NIPS 2024
+
+**GazeHOI:** [Toward Semantic Gaze Target Detection](https://proceedings.neurips.cc/paper_files/paper/2024/file/dbeb7e621d4a554069a6a775da0f7273-Paper-Conference.pdf) NIPS 2024
+
 
 | Dataset  |  Year  |   Modal     | Dimensions | Data size| Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
 |-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|:------------:|
@@ -38,7 +64,7 @@
 |[VideoGaze](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf)|2017|RGB|2D| 140 movies |120 movies | - | 20 movies| AUC, Min Dist., Dist., KL, AP | head box, outside gaze point| [Project](http://videogazefollow.csail.mit.edu/)|
 |[DLGaze](https://arxiv.org/pdf/1907.02364)|2018|RGB|2D| 95,000 |- | - | - | AUC, L2 Dist., Ang. | head box, gaze point| [Project](https://github.com/svip-lab/GazeFollowing)|
 |[VideoAttentionTarget](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2020|RGB|2D| 50 videos |- | - | - | AUC, L2 Dist., AP | head box, gaze point, inside/outside| [Project](https://github.com/ejcgt/attention-target-detection)|
-|[GOO](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2021|RGB|2D| GOO-Synth:192000; GOO-Real:9552 |- | - | - | AUC, L2 Dist., Ang. | head box, eye location, 2D gaze point, object box, gaze object box, segmentation mask| [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file)|
+|[GOO](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf)|2021|RGB|2D| GOO-Synth:192000; GOO-Real:9552 |- | - | - | AUC, L2 Dist., Ang. | head box, eye location, 2D gaze point, object box, gaze object box, segmentation mask| [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file)|
 |[GFIE](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 71,799 | 59,217 | 6,281 | 6,281 | AUC, L2 Dist., 3D Dist., 3D Ang. | head box, 2D gaze point, 3D gaze point| [Project](https://sites.google.com/view/gfie)|
 |[ChildPlay](https://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 120,549 | -| - | - | AUC, Dist., AP, P.Head | head box, gaze point, gaze class (Is it the head?)| [Project](https://www.idiap.ch/en/dataset/)|
 |[VsGaze](https://openreview.net/pdf?id=ALU676zGFE)|2024|RGB|2D| - | -| - | - | Dist., AP_IO_, F1_LAH, F1_LAEO, AP_SA | head box, gaze point, gaze communication classification label| -|
@@ -46,6 +72,12 @@
 
 
 ### Datasets for Gaze Object Prediction
+
+#### **Dataset Papers:**
+**GOO:** [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) CVPRW 2021
+
+**GESCAM:** [GESCAM : A Dataset and Method on Gaze Estimation for Classroom Attention Measurement](https://openaccess.thecvf.com/content/CVPR2024W/GAZE/papers/Mathew_GESCAM__A_Dataset_and_Method_on_Gaze_Estimation_for_CVPRW_2024_paper.pdf) CVPRW 2024
+
 | Dataset  |  Year  |   Context     | Data size | Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
 |-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|
 |[GOO-Synth](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) | 2021| Retail| 192,000| -| -| -| AUC, Dist., Ang.,Box AP, Mask AP| head box, eye location, 2D gaze point, object box, gaze object box, segmentation mask| [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file) |
@@ -53,6 +85,14 @@
 |[GESCAM](https://openaccess.thecvf.com/content/CVPR2024W/GAZE/papers/Mathew_GESCAM__A_Dataset_and_Method_on_Gaze_Estimation_for_CVPRW_2024_paper.pdf) |2024 |Classroom | -| -| -| -| AUC, Dist., Ang. | - | [Project](https://athulmmathew.github.io/GESCAM/) |
 
 ### Datasets for Human Object Interaction Detection
+
+#### **Dataset Papers:**
+**HICO:** [HICO: A Benchmark for Recognizing Human-Object Interactions in Images](https://openaccess.thecvf.com/content_iccv_2015/papers/Chao_HICO_A_Benchmark_ICCV_2015_paper.pdf) ICCV 2015
+
+**HICO-Det:** [Learning to Detect Human-Object Interactions](https://arxiv.org/pdf/1702.05448) WACV 2018
+
+**V-COCO:** [Visual Semantic Role Labeling](https://arxiv.org/pdf/1505.04474) Arxiv
+
 | Dataset  |  Year | Data size | Training | Validation | Testing | Evaluation Metric  | Project |                              
 |-----------------------------------------------------|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:|
 |[HICO](https://openaccess.thecvf.com/content_iccv_2015/papers/Chao_HICO_A_Benchmark_ICCV_2015_paper.pdf)|2015|47,776 |-|-|-|AP|[Project](http://www.umich.edu/~ywchao/hico/)|
@@ -329,3 +369,10 @@ I: RGB Image; D: Depth; T: Temporal; O: Object; P: Posture; E: Eye
 |[TransGOP](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|AAAI 2024|✘|✔|✘|0.947|0.097|16.7|82.6|84.1|94M|
 |[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✘|0.943|0.088|14.7|81.4|77.2|84M|
 |[Jin](https://ojs.aaai.org/index.php/AAAI/article/view/28883/29678)|ECCV 2024|✔|✔|✔|0.943|0.088|14.7|85.9|82.9|84M|
+
+
+### Human-Object Interaction Detection
+#### Results on HICO-Det dataset
+
+
+#### Results on V-COCO dataset
