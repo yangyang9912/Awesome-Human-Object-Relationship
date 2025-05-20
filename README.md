@@ -33,20 +33,27 @@
 |-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|:------------:|
 |[GazeFollow](https://people.csail.mit.edu/khosla/papers/nips2015_recasens.pdf)|2015|RGB|2D|126,925 |122,143 | - | 4782 | AUC, Min Dist., Avg Dist. | head box, body box, eye location, 2D gaze point, inside/outside| [Project](http://gazefollow.csail.mit.edu/)|
 |[VideoGaze](https://openaccess.thecvf.com/content_ICCV_2017/papers/Recasens_Following_Gaze_in_ICCV_2017_paper.pdf)|2017|RGB|2D| 140 movies |120 movies | - | 20 movies| AUC, Min Dist., Dist., KL, AP | head box, outside gaze point| [Project](http://videogazefollow.csail.mit.edu/)|
-|[DLGaze](https://arxiv.org/pdf/1907.02364)|2018|RGB|2D| |95,000 | - | - | AUC, L2 Dist., Ang. | head box, gaze point| [Project](https://github.com/svip-lab/GazeFollowing)|
-|[VideoAttentionTarget](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2020|RGB|2D| |50 videos | - | - | AUC, L2 Dist., AP | head box, gaze point, inside/outside| [Project](https://github.com/ejcgt/attention-target-detection)|
+|[DLGaze](https://arxiv.org/pdf/1907.02364)|2018|RGB|2D| 95,000 |- | - | - | AUC, L2 Dist., Ang. | head box, gaze point| [Project](https://github.com/svip-lab/GazeFollowing)|
+|[VideoAttentionTarget](https://openaccess.thecvf.com/content_CVPR_2020/papers/Chong_Detecting_Attended_Visual_Targets_in_Video_CVPR_2020_paper.pdf)|2020|RGB|2D| 50 videos |- | - | - | AUC, L2 Dist., AP | head box, gaze point, inside/outside| [Project](https://github.com/ejcgt/attention-target-detection)|
 |[GFIE](https://openaccess.thecvf.com/content/CVPR2023/papers/Hu_GFIE_A_Dataset_and_Baseline_for_Gaze-Following_From_2D_to_CVPR_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 71,799 | 59,217 | 6,281 | 6,281 | AUC, L2 Dist., 3D Dist., 3D Ang. | head box, 2D gaze point, 3D gaze point| [Project](https://sites.google.com/view/gfie)|
-|[ChildPlay](https://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 120,549 | -| - | - | AUC, Dist., AP, P.Head | head box, gaze point, gaze class (Is it the head?)| [Project](https://github.com/idiap/geomgaze)|
+|[ChildPlay](hhttps://openaccess.thecvf.com/content/ICCV2023/papers/Tafasca_ChildPlay_A_New_Benchmark_for_Understanding_Childrens_Gaze_Behaviour_ICCV_2023_paper.pdf)|2023|RGB/Depth|2D/3D| 120,549 | -| - | - | AUC, Dist., AP, P.Head | head box, gaze point, gaze class (Is it the head?)| [Project](https://github.com/idiap/geomgaze)|
 |[VsGaze](https://openreview.net/pdf?id=ALU676zGFE)|2024|RGB|2D| - | -| - | - | Dist., AP_IO_, F1_LAH, F1_LAEO, AP_SA | head box, gaze point, gaze communication classification label| -|
 |[GazeHOI](https://proceedings.neurips.cc/paper_files/paper/2024/file/dbeb7e621d4a554069a6a775da0f7273-Paper-Conference.pdf)|2024|RGB|2D| 43,808 | -| - | - | GazeAcc, Acc@1, Acc@3 | person box, object box, object class and interaction verb| -|
 
 
 ### Datasets for Gaze Object Prediction
-
+| Dataset  |  Year  |   Context     | Data size | Training | Validation | Testing | Evaluation Metric | Annotations | Project |                              
+|-----------------------------------------------------|:------:|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:| :------------:|
+|[GOO-Synth](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) | 2021| Retail| 192,000| -| -| -| AUC, Dist., Ang.,Box AP, Mask AP| head box, eye location, 2D gaze point, object box, gaze object box, segmentation mask| [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file) |
+|[GOO-Real](https://openaccess.thecvf.com/content/CVPR2021W/GAZE/papers/Tomas_GOO_A_Dataset_for_Gaze_Object_Prediction_in_Retail_Environments_CVPRW_2021_paper.pdf) |2021 |Retail | 9,552| -| -| -| AUC, Dist., Ang.,Box AP | head box, eye location, 2D gaze point, object box, gaze object box | [Project](https://github.com/upeee/GOO-GAZE2021?tab=readme-ov-file) |
+|[GESCAM](https://openaccess.thecvf.com/content/CVPR2024W/GAZE/papers/Mathew_GESCAM__A_Dataset_and_Method_on_Gaze_Estimation_for_CVPRW_2024_paper.pdf) |2024 |Classroom | -| -| -| -| AUC, Dist., Ang. | - | [Project](https://athulmmathew.github.io/GESCAM/) |
 
 ### Datasets for Human Object Interaction Detection
-
-
+| Dataset  |  Year | Data size | Training | Validation | Testing | Evaluation Metric  | Project |                              
+|-----------------------------------------------------|:------:|:----------------:|:------------:| :------------:|:------------:|:------------:|:------------:|
+|[HICO](https://openaccess.thecvf.com/content_iccv_2015/papers/Chao_HICO_A_Benchmark_ICCV_2015_paper.pdf)|2015|47,776 |-|-|-|AP|[Project](http://www.umich.edu/~ywchao/hico/)|
+|[HICO-Det](https://arxiv.org/pdf/1702.05448)|2018|47,776 |38,118|-|9,658|Defult AP, Known Object AP|[Project](http://www.umich.edu/~ywchao/hico/)|
+|[V-COCO](https://arxiv.org/pdf/1505.04474)|-|10,346 |2,533|2,867|4,946|AP_agent, AP_role|[Project](https://paperswithcode.com/dataset/v-coco)|
 
 ## Human-Object Relationship Understanding Methods
 
