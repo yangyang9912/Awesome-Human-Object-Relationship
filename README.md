@@ -5,11 +5,11 @@
 
 <p>
   <strong>A curated, survey-driven GitHub project for unified human-object relation modeling</strong><br/>
-  Covering <code>Human-Gaze-Target (HGT) Detection</code>, <code>Gaze Object Prediction (GOP)</code>, and <code>Human-Object Interaction (HOI) Detection</code>.
+  Covering <code>Human-Gaze-Target (HGT) Recognition</code>, <code>Gaze Object Prediction (GOP)</code>, and <code>Human-Object Interaction (HOI) Detection</code>.
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Task-HGT%20Detection-6C63FF" alt="HGT Detection"/>
+  <img src="https://img.shields.io/badge/Task-HGT%20Detection-6C63FF" alt="HGT Recognition"/>
   <img src="https://img.shields.io/badge/Task-GOP-8E7CFF" alt="GOP"/>
   <img src="https://img.shields.io/badge/Task-HOI%20Detection-4C9AFF" alt="HOI Detection"/>
   <img src="https://img.shields.io/badge/Focus-Unified%20Relation%20Modeling-1ABC9C" alt="Unified Relation Modeling"/>
@@ -36,8 +36,9 @@
 
 <p>
   <a href="#-overview">Overview</a> •
+  <a href="#-at-a-glance">At a Glance</a> •
   <a href="#-why-this-project">Why</a> •
-  <a href="#-core-highlights">Highlights</a> •
+  <a href="#-how-to-read-this-repository">How to Read</a> •
   <a href="#-taxonomy">Taxonomy</a> •
   <a href="#-benchmarks">Benchmarks</a> •
   <a href="#-evaluation">Evaluation</a> •
@@ -48,53 +49,44 @@
 
 ---
 
-> This repository is built around a unified view of human-object relationship understanding: from **attention** (where people look) to **interaction** (how people act on objects), with **GOP** serving as the key bridge between the two.
+> A unified reading hub for **attention**, **object grounding**, and **interaction reasoning** — with **GOP** as the bridge from *where humans look* to *how humans act on objects*.
 
 ## ✨ Overview
 
-Human-Object Relationship Understanding studies how humans attend to and interact with surrounding objects in visual scenes. This project organizes the area through three tightly connected problem settings:
+Human-Object Relationship Understanding studies how humans attend to and interact with surrounding objects in visual scenes. This repository organizes the area through three tightly connected problem settings:
 
 - **Human-Gaze-Target (HGT) Recognition**: predicting where or what a person is looking at
 - **Gaze Object Prediction (GOP)**: moving from gaze localization to object-level semantic grounding
 - **Human-Object Interaction (HOI) Detection**: predicting how a person physically interacts with an object
 
-This repository aims to provide a **clean, visually organized, and research-friendly entry point** that connects gaze-based attention modeling and interaction reasoning under a shared relational perspective.
+This project is designed to serve as a **clean, visual, and research-friendly entry point** for exploring unified human-object relation modeling.
 
 <p align="center">
   <img src="./readme_assets/overview_timeline.png" alt="Chronological overview of representative methods spanning HGT recognition and HOI detection" width="100%">
 </p>
 <p align="center"><em>Chronological overview of representative methods across HGT recognition and HOI detection.</em></p>
 
-It is designed to continuously organize:
-
-- task definitions and research evolution
-- method taxonomies and representative papers
-- datasets, benchmarks, and evaluation protocols
-- performance trends and open problems
-- future opportunities for unified human-object relation modeling
-
-
 ---
 
-## 🌟 Core Highlights
+## 🌟 At a Glance
 
-- A **unified formulation** for HGT, GOP, and HOI under structured human-object relation prediction
-- A **taxonomy-driven reading experience** with papers organized by paradigm and task setting
-- Curated **benchmark tables**, **performance snapshots**, and **evaluation summaries**
-- Visual support with **figures and tables** placed alongside the most relevant sections
-- A project structure designed to grow into an **awesome list + survey hub + benchmark guide**
+| Scope | What You Can Find Here | Why It Matters |
+|---|---|---|
+| **Tasks** | HGT, GOP, HOI, and unified relation understanding | Connects attention modeling with interaction reasoning |
+| **Content** | Taxonomies, representative papers, datasets, metrics, figures, and performance tables | Helps readers move quickly from overview to details |
+| **Use Cases** | Survey reading, paper discovery, benchmark lookup, project bootstrapping | Useful for both newcomers and active researchers |
 
 ---
 
 ## 🎯 Why This Project
 
-Most existing reviews focus on either gaze understanding or HOI detection alone. In contrast, this project follows a unified relational view and is designed to make the whole landscape easier to browse, compare, and extend:
+Most existing reviews focus on either gaze understanding or HOI detection alone. This repository instead emphasizes a unified relational perspective and makes the landscape easier to browse, compare, and extend:
 
 - both HGT and HOI ultimately predict **structured human-object relations**
 - both fields have evolved from **location-required pipelines** to **location-free, end-to-end, and semantics-aware modeling**
 - **GOP** serves as a natural bridge from attentional localization to interaction-oriented reasoning
 
-This project is useful if you work on:
+This repository is especially useful if you work on:
 
 - gaze following
 - gaze target detection
@@ -133,7 +125,6 @@ Under this view:
 </p>
 <p align="center"><em>From gaze to interaction: task evolution and unified human-object relationship modeling pipeline.</em></p>
 
-
 ---
 
 ## 🧭 How to Read This Repository
@@ -143,10 +134,9 @@ You can use this repository in several ways:
 - **As a survey companion**: follow the figures, taxonomies, and benchmark summaries section by section
 - **As a paper list**: expand the taxonomy blocks to browse representative methods by category
 - **As a benchmark reference**: jump directly to the dataset and evaluation sections
-- **As a project starter**: use the structure, reading path, and roadmap to build your own research notes or awesome list
+- **As a project starter**: use the reading path, roadmap, and curated lists to build your own notes or awesome-style resources
 
 ---
-
 ## 🗂 Taxonomy
 
 ## 1. Human-Gaze-Target Recognition
@@ -156,7 +146,7 @@ You can use this repository in several ways:
 </p>
 <p align="center"><em>Taxonomy of HGT recognition methods and the main modeling paradigms for HGT recognition.</em></p>
 
-### A. Location-required HGT detection
+### A. Location-required HGT Detection
 The target person is given in advance, usually through a head or face bounding box.
 
 <details>
@@ -236,7 +226,7 @@ The target person is given in advance, usually through a head or face bounding b
 
 ---
 
-### B. Location-free HGT detection
+### B. Location-free HGT Detection
 The model predicts human-target gaze relations directly from the scene, without explicit head priors.
 
 <details>
@@ -357,7 +347,7 @@ GOP extends gaze target prediction from **where someone looks** to **what object
 </p>
 <p align="center"><em>The main modeling paradigms for HOI detection.</em></p>
 
-### A. Location-required HOI detection
+### A. Location-required HOI Detection
 A candidate human-object pair is provided first, and the model predicts the interaction label.
 
 <details>
@@ -488,7 +478,7 @@ A candidate human-object pair is provided first, and the model predicts the inte
 
 ---
 
-### B. Location-free HOI detection
+### B. Location-free HOI Detection
 The model predicts complete `<human, interaction, object>` triplets directly from the image.
 
 <details>
@@ -747,8 +737,8 @@ The overall trend is moving toward:
 
 ## 🛣 Roadmap
 
-This repository is intended to evolve from a polished survey companion into a long-term research resource.
-
+This repository is evolving from a polished survey companion into a longer-term research resource.  
+The current version already includes the following core components:
 
 - [x] Build a unified view of HGT, GOP, and HOI
 - [x] Organize a clean taxonomy of representative methods
@@ -833,7 +823,7 @@ Replace the placeholders below with your real repository links:
 
 ## 📬 Project Note
 
-This repository is centered on the survey project by **Yang Jin, Guangyu Guo, and Binglu Wang**, and is structured to support paper reading, benchmark comparison, and future updates in unified human-object relationship understanding. Contact jin91999@gmail.com if any paper is missed!
+This repository is centered on the survey project by **Yang Jin, Guangyu Guo, and Binglu Wang**, and is designed to support paper reading, benchmark comparison, and future updates in unified human-object relationship understanding. Contact **jin91999@gmail.com** if any paper is missed!
 
 <div align="center">
   <sub>Built for unified human-object relational understanding research.</sub>
