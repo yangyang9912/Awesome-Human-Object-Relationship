@@ -21,7 +21,7 @@
 <p>
   <strong>Yang Jin</strong><sup>1</sup> ·
   <strong>Guangyu Guo</strong><sup>2</sup> ·
-  <strong>Binglu Wang</strong><sup>1</sup>
+  <strong>Binglu Wang</strong><sup>1&dagger;</sup>
 </p>
 
 <p>
