@@ -273,9 +273,8 @@ The model predicts human-target gaze relations directly from the scene, without 
 ---
 
 ### C. Gaze Object Prediction (GOP)
-GOP extends gaze target prediction from **where someone looks** to **what object is being attended to**.
 
-<details>
+<!-- <details>
 <summary><strong>Datasets and Benchmarks</strong> (2 papers)</summary>
 
 | Paper | Venue | Year |
@@ -283,7 +282,9 @@ GOP extends gaze target prediction from **where someone looks** to **what object
 | [GOO: A Dataset for Gaze Object Prediction in Retail Environments](https://ieeexplore.ieee.org/document/9523161) | CVPRW | 2021 |
 | [GESCAM : A Dataset and Method on Gaze Estimation for Classroom Attention Measurement](https://doi.org/10.1109/CVPRW63382.2024.00068) | CVPRW | 2024 |
 
-</details>
+</details> -->
+
+GOP extends gaze target prediction from **where someone looks** to **what object is being attended to**.
 
 <details>
 <summary><strong>Location-required GOP</strong> (4 papers)</summary>
@@ -486,15 +487,6 @@ A candidate human-object pair is provided first, and the model predicts the inte
 | Learning Self- and Cross-Triplet Context Clues for Human-Object Interaction Detection | TCSVT | 2024 | — |
 | [Diagnosing Human-object Interaction Detectors](https://arxiv.org/pdf/2308.08529.pdf) | IJCV | 2025 | [Code](https://github.com/neu-vi/Diag-HOI) |
 | Interaction Is Worth More Explanations: Improving Human–Object Interaction Representation With Propositional Knowledge | TCDS | 2025 | — |
-
-</details>
-
-<details>
-<summary><strong>Query-based Transformer methods</strong> (1 papers)</summary>
-
-| Paper | Venue | Year | Code |
-|---|---|---:|---|
-
 
 </details>
 
