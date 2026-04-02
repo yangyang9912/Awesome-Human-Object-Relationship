@@ -62,6 +62,11 @@ Human-Object Relationship Understanding studies how humans attend to and interac
 This project is designed to serve as a **clean, visual, and research-friendly entry point** for exploring unified human-object relation modeling.
 
 <p align="center">
+  <img src="./readme_assets/performance.png" alt="Figure 1 placeholder for the main teaser figure of the survey project" width="100%">
+</p>
+<p align="center"><em>Performance development for both HGT recognition (left) and HOI detection (right)</em></p>
+
+<p align="center">
   <img src="./readme_assets/overview_timeline.png" alt="Chronological overview of representative methods spanning HGT recognition and HOI detection" width="100%">
 </p>
 <p align="center"><em>Chronological overview of representative methods across HGT recognition and HOI detection.</em></p>
