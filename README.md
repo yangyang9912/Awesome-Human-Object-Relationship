@@ -49,7 +49,7 @@
 
 ---
 
-> A unified reading hub for **attention**, **object grounding**, and **interaction reasoning** — with **GOP** as the bridge from *where humans look* to *how humans act on objects*.
+> A unified reading hub for **attention**, **gaze object grounding**, and **interaction reasoning** — with **GOP** as the bridge from *where humans look* to *how humans act on objects*.
 
 ## ✨ Overview
 
@@ -224,25 +224,37 @@ The target person is given in advance, usually through a head or face bounding b
 
 </details>
 
+
+<details>
+<summary><strong>Others</strong> (1 papers)</summary>
+
+| Paper | Venue | Year |
+|---|---|---:|
+| [Multi-view Gaze Target Estimation](https://openaccess.thecvf.com/content/ICCV2025/html/Miao_Multi-view_Gaze_Target_Estimation_ICCV_2025_paper.html) | ICCV | 2025 |
+
+</details>
+
 ---
 
 ### B. Location-free HGT Detection
 The model predicts human-target gaze relations directly from the scene, without explicit head priors.
 
 <details>
-<summary><strong>Query-based Methods</strong> (4 papers)</summary>
+<summary><strong>Query-based</strong> (6 papers)</summary>
 
 | Paper | Venue | Year |
 |---|---|---:|
 | [End-to-End Human-Gaze-Target Detection with Transformers](https://ieeexplore.ieee.org/document/9879533) | CVPR | 2022 |
 | [Object-aware Gaze Target Detection](https://openaccess.thecvf.com/content/ICCV2023/papers/Tonini_Object-aware_Gaze_Target_Detection_ICCV_2023_paper.pdf) | ICCV | 2023 |
 | [Un-Gaze: A Unified Transformer for Joint Gaze-Location and Gaze-Object Detection](https://arxiv.org/abs/2308.13857) | TCSVT | 2023 |
+| [GazeDETR: Gaze Detection using Disentangled Head and Gaze Representations](https://arxiv.org/abs/2508.12966) | arXiv | 2025 |
 | [Eye See What You See: Query-Oriented Gaze Following](https://ieeexplore.ieee.org/document/11227675) | IJCNN | 2025 |
+| [Privileged Information-Guided Multitask Mutualistic Transformer for Gaze Prediction](https://ieeexplore.ieee.org/abstract/document/11125507) | TMM | 2025 |
 
 </details>
 
 <details>
-<summary><strong>Foundation Model-based Methods</strong> (4 papers)</summary>
+<summary><strong>Foundation Model-based</strong> (4 papers)</summary>
 
 | Paper | Venue | Year |
 |---|---|---:|
@@ -309,22 +321,25 @@ GOP extends gaze target prediction from **where someone looks** to **what object
 </details>
 
 <details>
-<summary><strong>Applications and Scenario-specific Studies</strong> (5 papers)</summary>
+<summary><strong>Applications and Scenario-specific Studies</strong> (10 papers)</summary>
 
 | Paper | Venue | Year |
 |---|---|---:|
 | [Human Gaze Following for Human-Robot Interaction](https://ieeexplore.ieee.org/document/8593580) | IROS | 2018 |
 | [Identifying Children with Autism Spectrum Disorder Based on Gaze-Following](https://ieeexplore.ieee.org/document/9190831) | ICIP | 2020 |
 | [ChildPlay: A New Benchmark for Understanding Children’s Gaze Behaviour](https://doi.org/10.1109/iccv51070.2023.01914) | ICCV | 2023 |
+| [The AI4Autism Project: A Multimodal and Interdisciplinary Approach to Autism Diagnosis and Stratification](https://dl.acm.org/doi/abs/10.1145/3610661.3616239) | ICMI | 2023 |
 | [HEOI: Human Attention Prediction in Natural Daily Life with Fine-Grained Human-Environment-Object Interaction Model](https://doi.org/10.1109/tip.2024.3512380) | TIP | 2024 |
 | [Using Depth-Enhanced Spatial Transformation for Student Gaze Target Estimation in Dual-View Classroom Images](https://ieeexplore.ieee.org/document/10887944) | ICASSP | 2025 |
-
+| [Student Gaze Target Estimation based on Depth Transformation on Dual-view Classroom Images](https://www.sciencedirect.com/science/article/abs/pii/S1077314225002565) | CVIU | 2025 |
+| [Gaze-Guided Multimodal LLMs for Social Scene Understanding](https://openreview.net/forum?id=tnCb62891w) | NeurIPS Workshop LAW | 2025 |
+| [Gaze Attention Estimation for Medical Environments](https://ieeexplore.ieee.org/abstract/document/11175121) | MVA | 2025 |
+| [Toward Gaze Target Detection of Young Autistic Children](https://ojs.aaai.org/index.php/AAAI/article/view/41177) | AAAI | 2026 |
 </details>
 
 ---
 
 
----
 
 ### E. Performance Snapshots for HGT and GOP
 
@@ -416,6 +431,8 @@ A candidate human-object pair is provided first, and the model predicts the inte
 | Geometric Features Enhanced Human–Object Interaction Detection | TIM | 2024 | — |
 | Semantic-Aware Dynamic Generation Networks for Few-Shot Human–Object Interaction Recognition | TNNLS | 2024 | — |
 | PPDM++: Parallel Point Detection and Matching for Fast and Accurate HOI Detection | TPAMI | 2024 | — |
+| Human–Object Interaction Detection via Global Context and Pairwise-Level Fusion Features Integration | Neural Networks | 2024 | [Code](https://github.com/ddwhzh/GFIN) |
+| [Geometric Features Enhanced Human-Object Interaction Detection](https://arxiv.org/pdf/2406.18691) | TIM | 2024 | [Code](https://github.com/zhumanli/GeoHOI) |
 | Bridging Detection Architectures With Foundation Models: A Unified Framework for Human–Object Interaction Detection | IEEE Access | 2026 | — |
 
 </details>
@@ -472,7 +489,7 @@ A candidate human-object pair is provided first, and the model predicts the inte
 
 | Paper | Venue | Year | Code |
 |---|---|---:|---|
-| [HODN: Disentangling Human-Object Feature for HOI Detection](https://arxiv.org/pdf/2308.10158.pdf) | TMM | 2023 | [Code](https://github.com/fangshuman/HODN) |
+
 
 </details>
 
@@ -506,7 +523,7 @@ The model predicts complete `<human, interaction, object>` triplets directly fro
 </details>
 
 <details>
-<summary><strong>Query-based Transformer methods</strong> (30 papers)</summary>
+<summary><strong>Query-based</strong> (30 papers)</summary>
 
 | Paper | Venue | Year | Code |
 |---|---|---:|---|
@@ -527,6 +544,7 @@ The model predicts complete `<human, interaction, object>` triplets directly fro
 | [Agglomerative Transformer for Human-Object Interaction Detection](https://arxiv.org/pdf/2308.08370.pdf) | ICCV | 2023 | [Code](https://github.com/six6607/AGER) |
 | ERNet: An Efficient and Reliable Human-Object Interaction Detection Network | TIP | 2023 | — |
 | Point-Based Learnable Query Generator for Human–Object Interaction Detection | TIP | 2023 | — |
+| [HODN: Disentangling Human-Object Feature for HOI Detection](https://arxiv.org/pdf/2308.10158.pdf) | TMM | 2023 | [Code](https://github.com/fangshuman/HODN) |
 | [Disentangled Interaction Representation for One-Stage Human-Object Interaction Detection](https://arxiv.org/pdf/2312.01713.pdf) | arXiv | 2023 | — |
 | [Discovering Syntactic Interaction Clues for Human-Object Interaction Detection](https://openaccess.thecvf.com/content/CVPR2024/papers/Luo_Discovering_Syntactic_Interaction_Clues_for_Human-Object_Interaction_Detection_CVPR_2024_paper.pdf) | CVPR | 2024 | — |
 | [Disentangled Pre-training for Human-Object Interaction Detection](https://arxiv.org/pdf/2404.01725.pdf) | CVPR | 2024 | [Code](https://github.com/xingaoli/DP-HOI) |
@@ -585,15 +603,6 @@ The model predicts complete `<human, interaction, object>` triplets directly fro
 
 </details>
 
-<details>
-<summary><strong>Proposal / pairwise feature fusion</strong> (2 papers)</summary>
-
-| Paper | Venue | Year | Code |
-|---|---|---:|---|
-| Human–Object Interaction Detection via Global Context and Pairwise-Level Fusion Features Integration | Neural Networks | 2024 | [Code](https://github.com/ddwhzh/GFIN) |
-| [Geometric Features Enhanced Human-Object Interaction Detection](https://arxiv.org/pdf/2406.18691) | TIM | 2024 | [Code](https://github.com/zhumanli/GeoHOI) |
-
-</details>
 
 ---
 
