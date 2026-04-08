@@ -16,24 +16,6 @@
   <img src="https://img.shields.io/badge/Type-Survey%20Project-111827" alt="Survey Project"/>
 </p>
 
-<h3>Project Team</h3>
-
-<p>
-  <strong>Yang Jin</strong><sup>1</sup> ·
-  <strong>Guangyu Guo</strong><sup>2</sup> ·
-  <strong>Binglu Wang</strong><sup>1&dagger;</sup>
-</p>
-
-<p>
-  <sup>1</sup> School of Astronautics, Northwestern Polytechnical University, Xi’an 710072, China<br/>
-  <sup>2</sup> School of Computer Science and Technology, Zhejiang University, Hangzhou 310058, China
-</p>
-
-<p>
-  <em>Yang Jin and Guangyu Guo contributed equally to this work.</em><br/>
-  <em>Corresponding author: Binglu Wang.</em>
-</p>
-
 <p>
   <a href="#-overview">Overview</a> •
   <a href="#-at-a-glance">At a Glance</a> •
@@ -50,6 +32,10 @@
 ---
 
 > A unified reading hub for **attention**, **gaze object grounding**, and **interaction reasoning** — with **GOP** as the bridge from *where humans look* to *how humans act on objects*.
+
+## 📬 Project Note
+
+This repository is designed to support paper reading, benchmark comparison, and future updates in unified human-object relationship understanding. Contact **jin91999@gmail.com** if any paper is missed!
 
 ## ✨ Overview
 
@@ -145,11 +131,6 @@ You can use this repository in several ways:
 ## 🗂 Taxonomy
 
 ## 1. Human-Gaze-Target Recognition
-
-<p align="center">
-  <img src="./readme_assets/hgt_taxonomy_and_paradigms.png" alt="Taxonomy of HGT recognition methods and paradigms for human-gaze-target recognition" width="96%">
-</p>
-<p align="center"><em>Taxonomy of HGT recognition methods and the main modeling paradigms for HGT recognition.</em></p>
 
 ### A. Location-required HGT Detection
 The target person is given in advance, usually through a head or face bounding box.
@@ -362,11 +343,6 @@ GOP extends gaze target prediction from **where someone looks** to **what object
 ---
 
 ## 2. Human-Object Interaction Detection
-
-<p align="center">
-  <img src="./readme_assets/hoi_taxonomy_and_paradigms.png" alt="Taxonomy of HGT recognition methods and paradigms for human-gaze-target recognition" width="100%">
-</p>
-<p align="center"><em>The main modeling paradigms for HOI detection.</em></p>
 
 ### A. Location-required HOI Detection
 A candidate human-object pair is provided first, and the model predicts the interaction label.
@@ -699,36 +675,6 @@ A dedicated paper list is also provided in [`gaze_papers_index.md`](./gaze_paper
 
 ---
 
-
-## 📏 Evaluation
-
-<p align="center">
-  <img src="./readme_assets/hgt_hoi_evaluation_metrics.png" alt="Illustration of evaluation metrics for HGT recognition and GOP" width="100%">
-</p>
-<p align="center"><em>Illustration of common evaluation metrics used in HGT recognition and GOP.</em></p>
-
-### HGT and GOP Metrics
-
-Common metrics include:
-
-- **AUC**: evaluates gaze heatmap quality
-- **L2 Distance**: Euclidean distance between predicted and ground-truth gaze targets
-- **Angular Error**: directional difference between predicted and ground-truth gaze vectors
-- **P.Head**: whether a model correctly predicts if someone is looking at another person's head
-- **wUoC / mSoC**: object-level grounding metrics for GOP
-
-### HOI Metrics
-
-Common HOI evaluation protocols include:
-
-- **mAP (Full / Rare / Non-Rare)** on HICO-Det
-- **AP<sub>role</sub> / AP<sub>agent</sub>** on V-COCO
-
-The core idea is strict:
-a prediction is correct only when **human localization**, **object localization**, and **interaction classification** are all correct.
-
----
-
 ## 📈 Research Trend
 
 The overall trend is moving toward:
@@ -824,13 +770,3 @@ Replace the placeholders below with your real repository links:
 - `Reading List`: `./papers/`
 
 --- -->
-
----
-
-## 📬 Project Note
-
-This repository is centered on the survey project by **Yang Jin, Guangyu Guo, and Binglu Wang**, and is designed to support paper reading, benchmark comparison, and future updates in unified human-object relationship understanding. Contact **jin91999@gmail.com** if any paper is missed!
-
-<div align="center">
-  <sub>Built for unified human-object relational understanding research.</sub>
-</div>
