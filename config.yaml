@@ -1,43 +1,51 @@
 # ============================================================
 # paper-tracker 配置 · 适配 Awesome-Human-Centered-Relationship
-# 把下面的分类关键词，按你 README 的 taxonomy 调成你想要的粒度。
+# 每个分类自带：关键词 + 插入到哪个 <details> 表格 + 行模板（列数要对齐！）
 # 这是你唯一需要修改的文件。
 # ============================================================
 
-# 只看最近多少天发布的论文（过滤窗口）
 lookback_days: 30
 
-# 你的既有分类（taxonomy）。每个分类给一组关键词，
-# 论文标题+摘要里命中任一关键词即归入该分类。
-# 这里的分类对齐 README 的主线（GOP / HGT / HOI）+ 跨类方法标签。
-# 想更细（如 Fusion-based / Query-based），可把对应方法关键词加进来。
 categories:
   - name: "Gaze Object Prediction (GOP)"
     keywords: ["gaze object prediction", "gaze target object", "what object is being looked at"]
     arxiv_queries: ["gaze object prediction"]
     s2_queries: ["gaze object prediction"]
+    target_summary: "Location-required GOP"        # 插入到该 <details> 表格
+    row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
+
   - name: "Human-Gaze-Target Recognition"
     keywords: ["gaze target", "gaze following", "gaze estimation", "gaze prediction"]
     arxiv_queries: ["gaze target", "gaze following"]
     s2_queries: ["gaze target recognition"]
+    target_summary: "Fusion-based"
+    row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
+
   - name: "Human-Object Interaction Detection"
     keywords: ["human-object interaction", "hoi detection", "human object interaction"]
     arxiv_queries: ["human-object interaction", "HOI detection"]
     s2_queries: ["human-object interaction detection"]
+    target_summary: "Proposal / pairwise feature fusion"   # 该表是 4 列（含 Code）
+    row_template: "| [{title}]({url}) | {venue} | {year} | — |"  # 4 列，Code 填 —
+
   - name: "Vision-Language / Foundation Model"
     keywords: ["vision-language", "vision language", "foundation model", "large multimodal", "vlm"]
     arxiv_queries: ["vision-language", "foundation model"]
     s2_queries: ["vision language model"]
+    target_summary: "Vision-language modeling"   # 该表是 4 列（含 Code）
+    row_template: "| [{title}]({url}) | {venue} | {year} | — |"
+
   - name: "Auxiliary & Applications"
     keywords: ["gaze", "human interaction", "robot", "healthcare", "education", "behavior understanding"]
     arxiv_queries: ["gaze", "human interaction"]
     s2_queries: ["human behavior understanding"]
+    target_summary: "Training Efficiency, Robustness, and Annotation"
+    row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
 
-# 数据源
 sources:
   arxiv:
-    categories: ["cs.CV", "cs.AI", "cs.MM", "cs.RO"]   # 该领域主要落在 CV/AI/MM/机器人
-    max_results: 40                                     # 每个关键词最多取多少篇
+    categories: ["cs.CV", "cs.AI", "cs.MM", "cs.RO"]
+    max_results: 40
   semantic_scholar:
     enabled: true
     limit: 40
