@@ -1,0 +1,22 @@
+name: Update Papers (paper-tracker)
+on:
+  schedule:
+    - cron: "0 8 * * *"        # 每天 UTC 08:00 自动运行（按需调整时区/频率）
+  workflow_dispatch: {}        # 允许在 Actions 页面手动触发
+permissions:
+  issues: write               # 脚本仅需开 Issue 的权限
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install --quiet requests pyyaml
+      - name: Fetch and open issue drafts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python fetch_papers.py
