@@ -181,6 +181,9 @@ The target person is given in advance, usually through a head or face bounding b
 | [Gaze Estimation via the Joint Modeling of Multiple Cues](https://doi.org/10.1109/TCSVT.2021.3071621) | TCSVT | 2022 |
 | [Dual Regression-Enhanced Gaze Target Detection in the Wild](https://doi.org/10.1109/TCYB.2023.3244269) | TCYB | 2024 |
 | [Gaze Target Detection Based on Head-Local-Global Coordination](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03933.pdf) | ECCV | 2024 |
+| [Gaze Target Estimation Anywhere with Concepts](https://arxiv.org/abs/2608.11367) | arXiv | 2026 |
+| [Uncertainty-Aware General Gaze Following via Circular Direction Distribution Learning and Probabilistic Gaze Geometry Modeling](https://doi.org/10.3390/jemr19040088) | Preprint | 2026 |
+| [Using YOLOv7 Combined with Visual Attention Mechanism to Achieve Real-time Tracking of Passenger Gaze Targets in Urban Rail Interactive Guidance Interface](https://doi.org/10.7716/aem.v15i3.3132) | Preprint | 2026 |
 
 </details>
 
@@ -299,6 +302,54 @@ The model predicts human-target gaze relations directly from the scene, without 
 | [Diffusion-Refined VQA Annotations for Semi-Supervised Gaze Following](https://arxiv.org/abs/2406.02774) | ECCV | 2024 |
 | [Visual Saliency Guided Gaze Target Estimation with Limited Labels](https://ieeexplore.ieee.org/document/10582000) | FG | 2024 |
 | [A Plug-and-Play LLM Reasoning Module for Gaze Target Detection](https://openreview.net/forum?id=Akccupz2pP) | Visual Intelligence | 2025 |
+| [Gaze allocation and evaluations of dynamic smiles following angry versus neutral expressions](https://doi.org/10.1371/journal.pone.0356283) | Preprint | 2026 |
+| [Predicting infant gaze patterns during video viewing using spatiotemporal salience models](https://doi.org/10.1080/13506285.2026.2726800) | Preprint | 2026 |
+| [Human versus Computer Vision](https://arxiv.org/abs/2608.10181) | arXiv | 2026 |
+| [Reviewer #1 (Public review): Beyond the Focus of Expansion: Retinal curl as a functional signal for heading estimation](https://doi.org/10.7554/elife.110770.2.sa3) | Preprint | 2026 |
+| [Reviewer #2 (Public review): Beyond the Focus of Expansion: Retinal curl as a functional signal for heading estimation](https://doi.org/10.7554/elife.110770.2.sa2) | Preprint | 2026 |
+| [Beyond the Focus of Expansion: Retinal curl as a functional signal for heading estimation](https://doi.org/10.7554/elife.110770.2) | Preprint | 2026 |
+| [Reviewer #3 (Public review): Beyond the Focus of Expansion: Retinal curl as a functional signal for heading estimation](https://doi.org/10.7554/elife.110770.2.sa1) | Preprint | 2026 |
+| [Layered Development of Visual Search Expertise in Architects](https://doi.org/10.3390/jemr19040090) | Preprint | 2026 |
+| [Preverbal infants' evaluation of sharing behaviors within a “taking turns” context is modulated by the perspectives they adopt](https://doi.org/10.3389/fdpys.2026.1904707) | Preprint | 2026 |
+| [A Methodological Framework for Studying Online Language–Vision Interplay in Human–Robot Interaction](https://doi.org/10.1007/s10936-026-10296-z) | Preprint | 2026 |
+| [Lightweight deep learning rendering framework for edge-deployed virtual reality art therapy systems](https://doi.org/10.1038/s41598-026-66755-z) | Preprint | 2026 |
+| [Listening shapes seeing: Sustained auditory spatial attention enhances early visual-cortical processing](https://doi.org/10.64898/2026.08.11.744194) | Preprint | 2026 |
+| [How do preservice teachers view classroom situations? A case study of variations in their mental classroom representations](https://doi.org/10.1080/13664530.2026.2715003) | Preprint | 2026 |
+| [Signals of Communicative Intent Enhance the Impact of Emotional Messages from Human Speakers, While Effects for Robots are Attenuated](https://doi.org/10.1007/s12369-026-01438-3) | Preprint | 2026 |
+| [Motion-Based Tokenization for Cross-Dataset Egocentric Gaze Modeling](https://arxiv.org/abs/2608.22926) | arXiv | 2026 |
+| [What one sees depends on how far the eye has moved](https://doi.org/10.1038/s41467-026-76503-6) | Preprint | 2026 |
+| [Beyond Static Screening: Depression Symptom Indicators Using Gaze Behavior and Gameplay Performance](https://doi.org/10.17083/ccntw978) | Preprint | 2026 |
+| [EgoHRV: Continuous Heart Rate Variability Estimation from Egocentric Systems for Autonomic Response and Skill Assessment](https://arxiv.org/abs/2608.18711) | arXiv | 2026 |
+| [Task- and experience-dependent modulation of head-eye coordination during ball interception](https://doi.org/10.64898/2026.08.20.746110) | Preprint | 2026 |
+| [The predictive mind in motion: exploring visuomotor expertise through interception](https://doi.org/10.1016/j.humov.2026.103529) | Preprint | 2026 |
+| [Preserved implicit metacognitive sensitivity distinguishes psychosis risk from first-episode psychosis: A cross-sectional virtual reality-based study](https://doi.org/10.64898/2026.08.09.743764) | Preprint | 2026 |
+| [Real-Time Webcam-Based Eye Tracking for AI-Assisted Reading Analysis in Web Environments](https://doi.org/10.38088/jise.1873959) | Preprint | 2026 |
+| [The Effect of Visual Impairment on the Controllability of a Brain-Computer Interface Using Visual Spatial Attention](https://doi.org/10.64898/2026.09.01.748503) | Preprint | 2026 |
+| [WISE-Screen: A Smartphone-Based Analytical Framework for Automated ASD Screening and Phenotyping via High-Fidelity Eye-tracking](https://doi.org/10.64898/2026.08.21.26358650) | Preprint | 2026 |
+| [What shapes perceived safety in autonomous mobility? Cross-cultural evidence from large-scale online eye tracking](https://doi.org/10.1007/s00146-026-03278-1) | Preprint | 2026 |
+| [Visual Attention and Strategic Sophistication in the Strategic Environment Effect: An Eye-Tracking Approach](https://doi.org/10.3390/jemr19040087) | Preprint | 2026 |
+| [Understanding Passersby’s Information Needs in Public Co-presence with Robots: An Eye-Tracking Study in the Field](https://doi.org/10.1080/10447318.2026.2714637) | Preprint | 2026 |
+| [Predicting Conscious Perception from Pupil’s Aperture Size Using Machine Learning Techniques](https://doi.org/10.64898/2026.08.26.747446) | Preprint | 2026 |
+| [A Residual Spatial Attention Graph Network for Sensorless Force Estimation in Teleoperated Robots](https://doi.org/10.1111/nyas.70388) | Preprint | 2026 |
+| [Sensor-based Knowledge Graph Modeling of Cognitive Pathways in Brand Information Recognition](https://doi.org/10.18494/sam6421) | Preprint | 2026 |
+| [Reafferent origins of image-forming vision](https://doi.org/10.3389/fevo.2026.1872222) | Preprint | 2026 |
+| [MIDAS: A multimodal interview-based framework for depression assessment from clinical interviews](https://doi.org/10.1016/j.actpsy.2026.107700) | Preprint | 2026 |
+| [Synergistic mechanism of virtual reality and reinforcement learning in educational adaptive learning systems](https://doi.org/10.1007/s44163-026-02091-5) | Preprint | 2026 |
+| [Efficient Human-Contact Representation for Human-Scene Interaction](https://arxiv.org/abs/2608.09388) | arXiv | 2026 |
+| [RGB-D Video Generation for Improving Human-to-Robot Object Handover Prediction](https://arxiv.org/abs/2608.13028) | arXiv | 2026 |
+| [ComBodied Agents: a New Paradigm of Human-Centric Agentic AI](https://arxiv.org/abs/2608.10915) | arXiv | 2026 |
+| [ACE-Ego-Hand: Repurposing Video Diffusion Models for Occlusion-Robust Egocentric 3D Hand Motion Recovery](https://arxiv.org/abs/2608.20308) | arXiv | 2026 |
+| [D3D-GEN: Robot-Aware Domain-Grounded Interactive 3D World Generation for Social Robotics](https://arxiv.org/abs/2608.11876) | arXiv | 2026 |
+| [Interworlds: studying metaphor using neurosymbolic AI](https://doi.org/10.48676/unibo/amsdottorato/12920) | Preprint | 2026 |
+| [Calming Robot Pitches? Exploring the Influence of Robot Voice Pitch on Children's Stress Levels](https://arxiv.org/abs/2608.19826) | arXiv | 2026 |
+| [Design and Development of a Low-Cost AI-Based Robotic Face for Real-Time Visual Tracking and Voice Interaction](https://doi.org/10.21203/rs.3.rs-9462253/v1) | Preprint | 2026 |
+| [Social robots and future crime: a scoping literature review](https://doi.org/10.1186/s40163-026-00296-8) | Preprint | 2026 |
+| [Generative Artificial Intelligence and Human Artificial Intelligence Interaction in Immersive Environments: Research and Development Directions](https://doi.org/10.1080/10447318.2026.2719170) | Preprint | 2026 |
+| [Robotoid humanness: when selfhood becomes machine-legible](https://doi.org/10.1007/s00146-026-03299-w) | Preprint | 2026 |
+| [Convergence of need technology and culture driving the era of physical AI in medicine](https://doi.org/10.3389/fdgth.2026.1914012) | Preprint | 2026 |
+| [Artificial intelligence-supported therapeutic interventions for autism spectrum disorder: a systematic review](https://doi.org/10.3389/fpsyt.2026.1833853) | Preprint | 2026 |
+| [Shaping the Future of Generative AI for Black Communities: A Frame Analysis of Public Discourse and Empirical Scholarly Research](https://arxiv.org/abs/2608.24767) | arXiv | 2026 |
+| [Genocide by Algorithm in Gaza: Artificial Intelligence, Countervailing Responsibility, and the Corruption of Public Discourse](https://doi.org/10.69755/2995-2212.1432) | Preprint | 2026 |
 
 </details>
 
@@ -409,6 +460,8 @@ A candidate human-object pair is provided first, and the model predicts the inte
 | Human–Object Interaction Detection via Global Context and Pairwise-Level Fusion Features Integration | Neural Networks | 2024 | [Code](https://github.com/ddwhzh/GFIN) |
 | [Geometric Features Enhanced Human-Object Interaction Detection](https://arxiv.org/pdf/2406.18691) | TIM | 2024 | [Code](https://github.com/zhumanli/GeoHOI) |
 | Bridging Detection Architectures With Foundation Models: A Unified Framework for Human–Object Interaction Detection | IEEE Access | 2026 | — |
+| [Identity-Aware Human-Object Interaction Motion Captioning](https://arxiv.org/abs/2608.20690) | arXiv | 2026 | — |
+| [Boundary-Gate Collaborative Enhancement GeoVis-GNN for Joint Segmentation and Label Recognition of Video Human-Object Interactions](https://doi.org/10.21203/rs.3.rs-10606421/v1) | Preprint | 2026 | — |
 
 </details>
 
@@ -456,6 +509,70 @@ A candidate human-object pair is provided first, and the model predicts the inte
 | Learning Self- and Cross-Triplet Context Clues for Human-Object Interaction Detection | TCSVT | 2024 | — |
 | [Diagnosing Human-object Interaction Detectors](https://arxiv.org/pdf/2308.08529.pdf) | IJCV | 2025 | [Code](https://github.com/neu-vi/Diag-HOI) |
 | Interaction Is Worth More Explanations: Improving Human–Object Interaction Representation With Propositional Knowledge | TCDS | 2025 | — |
+| [Vision-Language Models for Egocentric Video: From Hand-Object Interaction to Embodied AI](https://arxiv.org/abs/2608.18671) | arXiv | 2026 | — |
+| [Interpretable Modeling of Driver Attention Shifts with a Vision–Language Model](https://arxiv.org/abs/2508.05852) | arXiv | 2026 | — |
+| [Human-like meaning maps from single-prompt VLM ratings of local scene meaning](https://doi.org/10.64898/2026.08.30.748100) | Preprint | 2026 | — |
+| [Spatiotemporal vision-language transformer for hand pointing direction estimation with zero-shot diffusion segmentation](https://doi.org/10.1016/j.array.2026.101194) | Preprint | 2026 | — |
+| [MultiModal Code-Switching: Interleaving Visual Objects into Language for Explicit Object-Level Alignment](https://arxiv.org/abs/2608.11167) | arXiv | 2026 | — |
+| [Senna: Bridging Large Vision-Language Models and End-to-End Autonomous Driving](https://arxiv.org/abs/2410.22313) | arXiv | 2026 | — |
+| [StateTrace: An Object-Centric Framework for Hidden-State Spatiotemporal Reasoning in Long Videos](https://arxiv.org/abs/2608.18532) | arXiv | 2026 | — |
+| [FreqPrompt-AD: Frequency-guided local semantic prompting for zero-shot industrial anomaly detection and segmentation](https://doi.org/10.1007/s44443-026-01084-9) | Preprint | 2026 | — |
+| [CLARA: Clip-Level Multimodal Alignment with VLM-Derived Rationales for Hateful Video Detection](https://arxiv.org/abs/2608.15905) | arXiv | 2026 | — |
+| [Focus Where It Counts: A Salience-Driven Vision-Language Model for Low Vision Assistance](https://arxiv.org/abs/2608.28218) | arXiv | 2026 | — |
+| [EADIC: Entity Aware and Diverse Image Captioning Utilizing a Fusion Transformer](https://doi.org/10.48084/etasr.18013) | Preprint | 2026 | — |
+| [SAIN: Structure-Aware Interactive Navigation with Active Dialogue Grounding for Mobile Robot](https://arxiv.org/abs/2608.09196) | arXiv | 2026 | — |
+| [Semantic Planning with Large Language Models and Vision-Language Models for Collaborative Robots: A Review](https://doi.org/10.21203/rs.3.rs-10643317/v1) | Preprint | 2026 | — |
+| [Active Perception for Embodied Disambiguation](https://arxiv.org/abs/2608.13605) | arXiv | 2026 | — |
+| [UniProbe: A Learnable Token-Level Hallucination Detector for Large VLMs using Multi-Structural Internal Representations](https://arxiv.org/abs/2608.10835) | arXiv | 2026 | — |
+| [Diagnosing Dense Same-Class Attribute Misbinding in Large Vision-Language Models](https://arxiv.org/abs/2608.16805) | arXiv | 2026 | — |
+| [Explicit task reasoning empowering robotic manipulation](https://doi.org/10.1038/s44387-026-00145-8) | Preprint | 2026 | — |
+| [Chain of Spatial Thoughts: Modality-Agnostic Spatial Grounding for Vision Language Models](https://arxiv.org/abs/2608.10278) | arXiv | 2026 | — |
+| [ByteAction: Byte-space Action Recognition Foundation Model](https://arxiv.org/abs/2608.22760) | arXiv | 2026 | — |
+| [Fusion VLM-Gait: RGB-D fusion in vision-language models for explainable multi-task Parkinsonian gait analysis](https://doi.org/10.1038/s41598-026-67440-x) | Preprint | 2026 | — |
+| [Text-Anchored Semantic Perturbations for Transferable Jailbreak Attacks on Multimodal Large Language Models](https://arxiv.org/abs/2608.22312) | arXiv | 2026 | — |
+| [Conjunctive Poisoning in AI Supply-Chain Applications](https://arxiv.org/abs/2608.15913) | arXiv | 2026 | — |
+| [Mr3D-VL: A generalist vision language foundation model for Multiparametric 3D Magnetic Resonance Imaging](https://arxiv.org/abs/2608.12689) | arXiv | 2026 | — |
+| [Catellect-VL-2B: A Vision-Language Model for Edge-Based Feline Behavior Understanding](https://arxiv.org/abs/2608.22070) | arXiv | 2026 | — |
+| [Explainable artificial intelligence (XAI): From inherent explainability to large language models](https://arxiv.org/abs/2501.09967) | arXiv | 2026 | — |
+| [Transforming Science with Large Language Models: A Survey on AI-assisted Scientific Discovery, Experimentation, Content Generation, and Evaluation](https://arxiv.org/abs/2502.05151) | arXiv | 2026 | — |
+| [Multimodal Benchmark for Safety Assessment in Industrial Inspection Scenarios](https://arxiv.org/abs/2601.21173) | arXiv | 2026 | — |
+| [Don’t LAG, RAG: Training-Free Adversarial Detection Using RAG](https://arxiv.org/abs/2504.04858) | arXiv | 2026 | — |
+| [The illusion of clinical reasoning: a benchmark reveals the pervasive gap in vision-language models for clinical competency](https://doi.org/10.1038/s41746-026-03191-3) | Preprint | 2026 | — |
+| [UniFed-VLM: Federated Instruction Tuning for Vision-Language Models with Multiple Heterogeneity](https://arxiv.org/abs/2608.15516) | arXiv | 2026 | — |
+| [UC-VLM: Consistency-Driven Learning for AI-Generated Image Detection with Vision-Language Large Models](https://arxiv.org/abs/2608.15238) | arXiv | 2026 | — |
+| [Fully Unleashing the Multimodal Attacker: Meta-Adaptive Jailbreaking of Vision-Language Models](https://arxiv.org/abs/2608.27531) | arXiv | 2026 | — |
+| [Breaking the weakest link to evade vision language models](https://arxiv.org/abs/2608.18938) | arXiv | 2026 | — |
+| [StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models](https://arxiv.org/abs/2608.26067) | arXiv | 2026 | — |
+| [Explainable Federated Multimodal Foundation Intelligence Framework Integrating CrossModal Vision Transformers, Vision-Language Models, Self-Supervised Learning, and Clinical Large Language Models for Trustworthy Medical Diagnosis](https://doi.org/10.25258/ijddt.16.76s.30) | Preprint | 2026 | — |
+| [MetaStructAtlas: A Grounded 3D Vision-Language Dataset and Benchmark for Functional and Structural Reasoning in Whole-Body PET/CT](https://arxiv.org/abs/2609.03690) | arXiv | 2026 | — |
+| [A multimodal foundation model-enabled agent for human–robot collaboration in construction](https://doi.org/10.1007/s41693-026-00211-2) | Preprint | 2026 | — |
+| [Where To Look? : Causal Tracing of Vision Encoders in VLM](https://arxiv.org/abs/2608.10758) | arXiv | 2026 | — |
+| [frb-vlm-benchmark: a zero-shot Vision-Language Model benchmark for Fast Radio Burst detection](https://arxiv.org/abs/2607.07382) | arXiv | 2026 | — |
+| [EviSafe: Evidence-Grounded Safety Evaluation for Vision-Language Models](https://arxiv.org/abs/2608.23313) | arXiv | 2026 | — |
+| [Toward generalizable crop-weed detection with vision-language models](https://doi.org/10.1016/j.atech.2026.102512) | Preprint | 2026 | — |
+| [AlignJEPA: Predictive Vision-Language Alignment for Remote Sensing Foundation Models](https://arxiv.org/abs/2608.15456) | arXiv | 2026 | — |
+| [What's the Catch? Evaluating Temporal Consistency in Vision-Language Models](https://arxiv.org/abs/2608.23474) | arXiv | 2026 | — |
+| [Uncertainty-Aware Art-Historical Dating with Vision-Language Models](https://arxiv.org/abs/2608.18984) | arXiv | 2026 | — |
+| [VisCache: Visual KV Cache Pruning for Efficient Vision Large Language Model Inference](https://arxiv.org/abs/2608.24063) | arXiv | 2026 | — |
+| [MedUP: Awakening Unified Understanding and Perception in Medical Vision-Language Models](https://arxiv.org/abs/2608.10635) | arXiv | 2026 | — |
+| [Attention-Guided Vision-Language Model for Automated Radiology Report Generation](https://doi.org/10.70917/ijcisim-2026-5290) | Preprint | 2026 | — |
+| [CL4D: Contrastive Language-4D Pretraining for Vision-Language Reasoning in Dynamic Scenes](https://arxiv.org/abs/2608.18734) | arXiv | 2026 | — |
+| [Multi-View Relational Distillation for Spatial Reasoning with Vision-Language Models](https://arxiv.org/abs/2608.10864) | arXiv | 2026 | — |
+| [CARD: Diagnosing Belief to Action Routing Failures in Vision Language Models](https://arxiv.org/abs/2608.20763) | arXiv | 2026 | — |
+| [TRAPSBench: Vision-Language Models Encode but Fail to Express Epistemic Restraint](https://arxiv.org/abs/2608.13167) | arXiv | 2026 | — |
+| [A Vision-Language Framework for Predicting Brain Tumor Recurrence from Multimodal, Longitudinal Patient Data](https://doi.org/10.64898/2026.08.11.26360196) | Preprint | 2026 | — |
+| [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484) | arXiv | 2026 | — |
+| [A Vision-Language Model for Coronary Angiography Interpretation and Clinical Decision Support](https://doi.org/10.64898/2026.08.11.26360095) | Preprint | 2026 | — |
+| [From Inference to Adaptation: A Unified Optimal Transport View of Vision Language Model](https://arxiv.org/abs/2608.18339) | arXiv | 2026 | — |
+| [On the Robustness of Temporal Vision-Language Models for Surgical Endoscopy Videos](https://arxiv.org/abs/2608.14262) | arXiv | 2026 | — |
+| [Context-aware multimodal reasoning for explainable Bengali fake news detection using vision-language models](https://doi.org/10.1007/s44354-026-00047-w) | Preprint | 2026 | — |
+| [Oral MLLM Scoping Review Protocol: Multimodal Large Language Models in Stomatology](https://doi.org/10.17605/osf.io/rx8sm) | Preprint | 2026 | — |
+| [NumerosityVLM: A Cognitively Inspired Benchmark for Interpreting Numerosity Representations in Vision-Language Models](https://arxiv.org/abs/2608.15425) | arXiv | 2026 | — |
+| [Seeing Before Answering: Training-Free Visual Layer Profiling for Vision-Language Models](https://arxiv.org/abs/2608.16263) | arXiv | 2026 | — |
+| [PragMatch: Separating Pragmatic Incongruity from Cross-Modal Mismatch in Large Vision-Language Models](https://arxiv.org/abs/2608.09772) | arXiv | 2026 | — |
+| [EXPL-FR: Explaining Face Recognition Models via Vision-Language Alignment](https://arxiv.org/abs/2608.21486) | arXiv | 2026 | — |
+| [Volumetric Radiology AI in the Era of Multimodal Large Language Models](https://arxiv.org/abs/2608.20549) | arXiv | 2026 | — |
+| [CertifiedGPT: Evaluating Adversarial Robustness of Vision and Language Models Against Targeted Black-Box Attacks](https://doi.org/10.5753/jbcs.2026.6584) | Preprint | 2026 | — |
 
 </details>
 
@@ -638,3 +755,89 @@ Replace the placeholders below with your real repository links:
 - `Reading List`: `./papers/`
 
 --- -->
+
+
+## 🆕 paper-tracker (uncategorized)
+
+| [Visual hand gesture recognition with deep learning: A comprehensive review of methods, datasets, challenges and future research directions](https://arxiv.org/abs/2507.04465) | arXiv | 2026 |
+| [Theoretical and Methodological Insights From Five Transcribed and Annotated Daylong Audio Recordings of Young Children’s Language Environments](https://doi.org/10.1177/17456916261445341) | Preprint | 2026 |
+| [A Lightweight Context-Aware Detector for Small and Occluded Targets in Aerial Power-Line Inspection](https://doi.org/10.21203/rs.3.rs-9301249/v1) | Preprint | 2026 |
+| [Successful coordination emerges from aligned self-predictions in a dynamic motor interaction](https://doi.org/10.1038/s44271-026-00523-7) | Preprint | 2026 |
+| [The nihilism industry: Streaming disavowal and ressentiment in the age of prediction markets](https://doi.org/10.1017/fas.2026.10050) | Preprint | 2026 |
+| [What the mental lexicon might be](https://doi.org/10.1075/ml.00029.alm) | Preprint | 2026 |
+| [Reviewer #3 (Public review): Prediction tendency, eye movements, and attention in a unified framework of neural speech tracking](https://doi.org/10.7554/elife.101262.3.sa1) | Preprint | 2026 |
+| [Reviewer #2 (Public review): Prediction tendency, eye movements, and attention in a unified framework of neural speech tracking](https://doi.org/10.7554/elife.101262.3.sa2) | Preprint | 2026 |
+| [Reviewer #1 (Public review): Prediction tendency, eye movements, and attention in a unified framework of neural speech tracking](https://doi.org/10.7554/elife.101262.3.sa3) | Preprint | 2026 |
+| [What fails to come to mind: omissions and the representational structure of social attention](https://doi.org/10.1007/s11229-026-05757-w) | Preprint | 2026 |
+| [ML-Assisted Cognitive Characterization of Human Problem Solving Behaviors through Visuo-Spatial Game](https://doi.org/10.21203/rs.3.rs-8794593/v1) | Preprint | 2026 |
+| [Enhancing resilience, flexibility, and well-being through cognitive-emotional training: behavioral and neural evidence](https://doi.org/10.1038/s41598-026-63059-0) | Preprint | 2026 |
+| [Visual, visuomotor, and kinesthetic abilities in football players: their relationship with sport-specific performance and trainability](https://doi.org/10.3389/fnins.2026.1930426) | Preprint | 2026 |
+| [Attention Capture Is Not Detection: A Two-Stage Account of How Humans Miss Localized AI Image Edits](https://arxiv.org/abs/2608.13865) | arXiv | 2026 |
+| [Affordances as Response-Dependent Properties: Beyond Dispositionalism and Relationalism](https://doi.org/10.1007/s11245-026-10464-9) | Preprint | 2026 |
+| [The Suppression Head Impulse Paradigm in Clinical Vestibular Testing: An Interpretation-Focused Narrative Review](https://doi.org/10.65717/iao.2026.262416) | Preprint | 2026 |
+| [Conscious Access as Continuous-to-Discrete Translation](https://arxiv.org/abs/2608.20723) | arXiv | 2026 |
+| [Learning to carve nature at its joints: the development of hierarchical event structures in perception and action](https://doi.org/10.1016/j.dr.2026.101290) | Preprint | 2026 |
+| [Code as Anchor, Memory and Metaphor as Support: Learner Experiences with Multi-View Visualizations](https://arxiv.org/abs/2606.19570) | arXiv | 2026 |
+| [Pre-stimulus microsaccadic inhibition reflects both temporal and sensory expectations](https://doi.org/10.1007/s00221-026-07384-w) | Preprint | 2026 |
+| [Understanding Attention Allocation, Exploration Dexterity, and the Role of Prior Experience in Stationary VR Consumption: Implications for Scene Design](https://doi.org/10.21203/rs.3.rs-9441873/v1) | Preprint | 2026 |
+| [The Contribution of Spatially Tuned Brain Cells to Human Navigation Performance](https://doi.org/10.1007/s42489-026-00225-4) | Preprint | 2026 |
+| [Contextual Visual Distinctiveness in Online Product Search](https://arxiv.org/abs/2608.21691) | arXiv | 2026 |
+| [Behaviorally Adaptive and Inclusive Advanced Driver‐Assistance Systems](https://doi.org/10.1002/aisy.70505) | Preprint | 2026 |
+| [Toddlers show heightened attention to selective distributors](https://doi.org/10.1016/j.cogpsych.2026.101831) | Preprint | 2026 |
+| [Biomarkers of cognitive deficits for assessment and rehabilitation protocols in immersive virtual reality](https://doi.org/10.48676/unibo/amsdottorato/12965) | Preprint | 2026 |
+| [Perceived time in the presence of others: Further arguments for an attentional view of social facilitation](https://doi.org/10.1016/j.jesp.2026.104997) | Preprint | 2026 |
+| [Magic and cognition: a scoping review of empirical evidence on cognitive and neural processes](https://doi.org/10.3389/fpsyg.2026.1921905) | Preprint | 2026 |
+| [On the interaction between layout and narrative in the processing of comic strips.](https://doi.org/10.1037/xlm0001662) | Preprint | 2026 |
+| [Hippocampal mechanisms underlying the resolution of competition in memory and perception](https://doi.org/10.1038/s41467-026-77400-8) | Preprint | 2026 |
+| [From Adaptation to Intelligence: A Systematic Review of Data, Strategies, and Impact in Personalized VR](https://arxiv.org/abs/2510.13123) | arXiv | 2026 |
+| [Stress reorganizes claustral ensembles to bias spatial and social vigilance](https://doi.org/10.21203/rs.3.rs-10459582/v1) | Preprint | 2026 |
+| [Stochastic Estimation of Transduced Language Models](https://arxiv.org/abs/2608.27428) | arXiv | 2026 |
+| [Estimation method of attentional object using spatial frequency selectivity in pupillary response](https://doi.org/10.1371/journal.pone.0356996) | Preprint | 2026 |
+| [Fusing Structural Phenotypes with Functional Data for Early Prediction of Primary Angle-Closure Glaucoma Progression.](https://doi.org/10.1016/j.xops.2026.101247) | Preprint | 2026 |
+| [Conflict Dynamics Within and Across Trials: The Effect of Distractor-Target Stimulus Onset Asynchrony](https://doi.org/10.1007/s42113-026-00330-7) | Preprint | 2026 |
+| [Cross-trait and multi-polytranscriptomic score analysis of Parkinson’s disease identifies novel associations and improves prediction](https://doi.org/10.64898/2026.08.21.26358780) | Preprint | 2026 |
+| [A quantum-inspired framework for real-time trust estimation in human–AI interaction: a pilot study](https://doi.org/10.1038/s41598-026-67931-x) | Preprint | 2026 |
+| [Emotion Understanding in Streaming Video with Trajectory-Aware Reliability](https://arxiv.org/abs/2608.26786) | arXiv | 2026 |
+| [EOG-Based Eye-Writing Systems: 2013-2025 Review](https://doi.org/10.35378/gujs.1915454) | Preprint | 2026 |
+| [From signal to construct evidence: multimodal consumer-wearable sensing in real general-aviation flight](https://doi.org/10.3389/fnrgo.2026.1911259) | Preprint | 2026 |
+| [Computer Vision Methods for Behavioral Phenotyping in Autism Spectrum Disorder: A Systematic Review](https://doi.org/10.21203/rs.3.rs-10892681/v1) | Preprint | 2026 |
+| [DepressionAgent: Reading, Listening, Seeing, and Deliberating Multimodal Evidence for Depression Risk Assessment](https://arxiv.org/abs/2608.13891) | arXiv | 2026 |
+| [Exploring multi-answer visual question answering with object detection: a systematic review](https://doi.org/10.11591/ijict.v15i3.pp1097-1114) | Preprint | 2026 |
+| [SPL4SH: Designing a Systematic Pipeline for 4D Synthetic Humans in XR Content Creation](https://doi.org/10.5753/jbcs.2026.8229) | Preprint | 2026 |
+| [Dual-Stream Cross-Anchor Correction Grounding Long-Form Captions and the Domain Limits of Object-Level Anchors](https://arxiv.org/abs/2608.12746) | arXiv | 2026 |
+| [Comparative Study of Out-of-the-Box Technology for Automatic Target Detection and Recognition](https://arxiv.org/abs/2608.17917) | arXiv | 2026 |
+| [MISSFusion: a multi-granularity interaction and semantic-structure rectification network for infrared and visible image fusion](https://doi.org/10.1007/s44443-026-01122-6) | Preprint | 2026 |
+| [Defake-o3: From Speculative Rationales to Verifiable Evidence for Explainable AIGI Detection](https://arxiv.org/abs/2608.16259) | arXiv | 2026 |
+| [Occlusion-Aware Image and Video Perception for Vulnerable Road User Detection: Methods, Benchmarks, and Deployment Challenges](https://doi.org/10.7716/aem.v15i3.4320) | Preprint | 2026 |
+| [SA-RGLP: Syntax-Aware Residual Graph Label Propagation with LLM Soft Priors for Metaphor Detection](https://doi.org/10.21203/rs.3.rs-10641869/v1) | Preprint | 2026 |
+| [Frequency-aware elastic prototype boundary learning for long-tailed scene graph generation](https://doi.org/10.1007/s44443-026-01030-9) | Preprint | 2026 |
+| [Hallucination-Free GUI Grounding via Regression-Free Layout-Aware Matching](https://arxiv.org/abs/2608.09654) | arXiv | 2026 |
+| [Task-disentangled Low-Rank Adaptation for Versatile Audio-visual Multi-modal Learning Tasks within a Unified Framework](https://arxiv.org/abs/2608.24209) | arXiv | 2026 |
+| [Mapping the Concept Landscape: Structural Perception of Global Distributions for Transparent Data Pruning](https://arxiv.org/abs/2608.22858) | arXiv | 2026 |
+| [Multimodal-context Interruptibility Dataset for Proactive Services on Smart Speakers at Home](https://doi.org/10.1038/s41597-026-07618-0) | Preprint | 2026 |
+| [ID-VTG: Image-Disambiguated Video Temporal Grounding](https://arxiv.org/abs/2608.20127) | arXiv | 2026 |
+| [The Double-Edged Sword of AI Pair Programmers: A Systematic Literature Review of Security Vulnerabilities in AI-Generated Code and Agentic Development Environments](https://doi.org/10.66823/2egmd793) | Preprint | 2026 |
+| [Bitstream Action Recognition is Byte Modeling](https://arxiv.org/abs/2608.15695) | arXiv | 2026 |
+| [Web-Based Student Academic Information System](https://doi.org/10.37899/journal-la-sociale.v7i4.5709) | Preprint | 2026 |
+| [Visual General Intelligence: A White Paper](https://arxiv.org/abs/2608.25924) | arXiv | 2026 |
+| [Unlocking the Potential of Image Editing via Concept Scaling and Dense Supervision](https://arxiv.org/abs/2608.16812) | arXiv | 2026 |
+| [SonarLLM: A Native Sonar--Optical Multimodal Large Language Model for Underwater Perception](https://arxiv.org/abs/2608.24325) | arXiv | 2026 |
+| [Large language medicine: defining a new paradigm in human health](https://doi.org/10.3389/fsci.2026.1810095) | Preprint | 2026 |
+| [Towards general embodied intelligence: integrating large language models, knowledge bases, and reasoning capabilities to build the next generation of AI agents](https://arxiv.org/abs/2608.19794) | arXiv | 2026 |
+| [Multimodal Video Summarization Using Vision‐Language Embeddings and Hierarchical Temporal Modeling](https://doi.org/10.1002/ail2.70039) | Preprint | 2026 |
+| [When chatbots are perceived as “understanding”: a study on how virtual agent persona styles and affective interaction promote mental health acceptance](https://doi.org/10.3389/fpsyg.2026.1863595) | Preprint | 2026 |
+| [Embodied Interaction and Spatial Presence in Virtual Immersive Media Systems](https://doi.org/10.62051/e5065t17) | Preprint | 2026 |
+| [Ethnographies of Human‐AI Collaborations: What Arrangements of Expertise Emerge?](https://doi.org/10.1111/soc4.70246) | Preprint | 2026 |
+| [Agents Through the Ages](https://doi.org/10.1007/s13218-026-00918-y) | Preprint | 2026 |
+| [Extended Reality for Enhancing Surgery: Research Directions to Transform the Operating Environment](https://doi.org/10.1007/s41666-026-00250-y) | Preprint | 2026 |
+| [A pilot randomized controlled study of a digital art therapy paradigm for children with ASD: integrating pivotal response treatment into video animation and physical model design](https://doi.org/10.3389/fpsyt.2026.1894877) | Preprint | 2026 |
+| [Affect-aware conversational adaptation in mixed reality procedural tasks](https://doi.org/10.1007/s12652-026-05125-z) | Preprint | 2026 |
+| [Animal-Assisted Interventions for Neurodivergent Individuals](https://doi.org/10.3390/books978-3-7258-8752-1) | Preprint | 2026 |
+| [Bidirectional Deaf-Hearing Communication: a Modular Service- Oriented System Combining Multi-Purpose Artificial Intelligence and 3D Avatar Rendering](https://doi.org/10.21203/rs.3.rs-10143194/v1) | Preprint | 2026 |
+| [Elicitation and Assessment of Hand-Based Gestures for Information Processing in Immersive Environments](https://doi.org/10.1177/00187208261480471) | Preprint | 2026 |
+| [CEAA: A Cognitive Embodied Agents Architecture for Interactive Computing Systems](https://arxiv.org/abs/2608.09848) | arXiv | 2026 |
+| [A reinforcement learning framework with adaptive psychological state awareness for safe and effective intelligent psychological intervention](https://doi.org/10.1007/s44163-026-02011-7) | Preprint | 2026 |
+| [AI-Enabled Business Intelligence Systems: A Framework for Automated Analytics, Decision Support, and Organizational Innovation](https://doi.org/10.59543/jidmis.v3.2245) | Preprint | 2026 |
+| [From Scaffolding to Internalization: Enhancing CPR Training with In-Situ Visualization and Kinesthetic Feedback](https://arxiv.org/abs/2608.08729) | arXiv | 2026 |
+| [AI IN PSYCHIATRIC DIAGNOSTICS – A REVIEW](https://doi.org/10.31435/ijitss.3(51).2026.6494) | Preprint | 2026 |
+| [Gender, harassment, and safety in immersive digital spaces: A study of inequality on the metaverse](https://doi.org/10.1016/j.ssaho.2026.103536) | Preprint | 2026 |
