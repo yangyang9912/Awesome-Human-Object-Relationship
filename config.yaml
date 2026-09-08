@@ -6,6 +6,9 @@
 
 lookback_days: 30
 
+# 单次运行最多新增多少篇（超过的留在下次跑，避免一个 PR 太大难审阅）
+max_total_per_run: 50
+
 categories:
   - name: "Gaze Object Prediction (GOP)"
     keywords: ["gaze object prediction", "gaze target object", "what object is being looked at"]

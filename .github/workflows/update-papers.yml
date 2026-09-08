@@ -4,7 +4,7 @@ on:
     - cron: "0 8 * * *"        # 每天 UTC 08:00 自动运行（按需调整时区/频率）
   workflow_dispatch: {}        # 允许在 Actions 页面手动触发
 permissions:
-  contents: write             # 需要推送分支 + 修改 README
+  contents: write             # 需要让 create-pull-request 动作推送分支
   pull-requests: write        # 需要开 Pull Request
 jobs:
   track:
@@ -13,13 +13,30 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install dependencies
         run: pip install --quiet requests pyyaml
-      - name: Fetch papers and open PR
+
+      # 只让脚本检索 + 改写本地 README；不自行提交/开 PR（PAPER_TRACKER_NO_COMMIT=1）
+      - name: Fetch papers and update README
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
+          PAPER_TRACKER_NO_COMMIT: "1"
         run: python paper_tracker.py
+
+      # 由官方动作负责 commit + push 分支 + 开 PR（对 token 权限处理最稳妥）
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "paper-tracker: 自动新增论文"
+          title: "[paper-tracker] 自动新增论文"
+          body: |
+            自动检索并新增论文到 README 对应分类。
+            请审阅 diff，确认无误后点击 Merge。脚本不会直接改 main 分支。
+          branch: paper-tracker/auto
+          delete-branch: true
+          base: main

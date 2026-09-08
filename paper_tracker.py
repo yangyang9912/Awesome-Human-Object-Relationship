@@ -330,6 +330,11 @@ def main():
             seen[key] = p
     papers = [p for p in seen.values()
               if not p["published"] or p["published"] >= since_str]
+    # 单次总量上限，避免一个 PR 塞太多难以审阅（其余留待下次）
+    max_total = int(cfg.get("max_total_per_run", 0))
+    if max_total and len(papers) > max_total:
+        log(f"候选 {len(papers)} 篇超过上限 {max_total}，截断（其余下次运行再补）。")
+        papers = papers[:max_total]
     log(f"近 {lookback} 天候选: {len(papers)} 篇")
 
     with open(README_PATH, encoding="utf-8") as f:
@@ -366,8 +371,10 @@ def main():
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
     log(f"已写入 README：新增 {n_added} 行。")
-    if debug:
-        log("调试模式：不提交。")
+    # 调试模式，或显式设置 PAPER_TRACKER_NO_COMMIT=1（交给 workflow 动作提交/开 PR）时，
+    # 仅保留工作区改动，不自行 git commit / 开 PR。
+    if debug or os.environ.get("PAPER_TRACKER_NO_COMMIT"):
+        log("（不自动提交/开 PR，改动已保留在工作区，交由后续步骤处理。）")
         return
     commit_and_open_pr(n_added)
     log("完成。")
