@@ -2,14 +2,17 @@
 """
 paper-tracker: 自动检索 + 自动开 PR（无需手动粘贴）
 ====================================================
-每天（GitHub Actions 定时）检索 arXiv + Semantic Scholar 的新论文，
-按 config.yaml 的「既有分类」归类，把新行直接插入 README 对应的
-<details> 表格（列数由每个分类的 row_template 决定），然后推到一个
-新分支并开 Pull Request。你只需审阅 diff、点一下 Merge。
+每天（GitHub Actions 定时）检索新论文，按 config.yaml 的「既有分类」归类，
+把新行直接插入 README 对应的 <details> 表格（列数由每个分类的 row_template
+决定），然后推到一个新分支并开 Pull Request。你只需审阅 diff、点一下 Merge。
+
+数据源（均免费、无需密钥即可跑）：
+  1. OpenAlex  —— 主源，覆盖 arXiv 预印本 + 会议/期刊，限额宽松（polite pool）。
+  2. arXiv    —— 兜底源，best-effort；对 429 与「200 空 feed」静默限流做重试退避。
+  3. Semantic Scholar —— 可选，免费额度很低，建议配 S2_API_KEY 再用。
 
 依赖: requests, pyyaml
-环境变量: GITHUB_TOKEN, GITHUB_REPOSITORY
-          S2_API_KEY（可选，提高 Semantic Scholar 限额）
+环境变量: GITHUB_TOKEN, GITHUB_REPOSITORY, S2_API_KEY(可选)
 未设置 GITHUB_TOKEN 时进入「调试模式」，只改本地 README 草稿、不提交。
 """
 import os
@@ -24,8 +27,8 @@ CONFIG_PATH = os.environ.get("CONFIG_PATH", "config.yaml")
 README_PATH = os.environ.get("README_PATH", "README.md")
 API_BASE = "https://api.github.com"
 
-# arXiv 官方要求：User-Agent 必带；且建议 < 1 请求/3 秒
-UA = "paper-tracker-bot/1.0 (github.com/yangyang9912/Awesome-Human-Centered-Relationship)"
+# arXiv / OpenAlex 都建议在请求里带上可联系到的 User-Agent
+UA = "paper-tracker-bot/1.0 (mailto:paper-tracker@example.com)"
 
 
 def log(m):
@@ -74,26 +77,104 @@ def http_get(url, params=None, headers=None, timeout=45, max_retries=4):
     raise RuntimeError("重试耗尽")
 
 
+def norm_title(t):
+    return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
+
+
+# ---------------------------------------------------------- OpenAlex (主源)
+def _oa_abstract(inv):
+    if not inv:
+        return ""
+    words = {}
+    for w, positions in inv.items():
+        for p in positions:
+            words[p] = w
+    return " ".join(words[i] for i in sorted(words))
+
+
+def fetch_openalex(queries, since_str, mailto, per_page=50):
+    base = "https://api.openalex.org/works"
+    out = []
+    for q in queries:
+        params = {
+            "search": q,
+            "filter": f"from_publication_date:{since_str}",
+            "per-page": per_page,
+            "mailto": mailto,
+        }
+        try:
+            r = http_get(base, params=params, timeout=45)
+            data = r.json()
+        except Exception as e:
+            log(f"OpenAlex 失败 ({q[:40]}): {e}")
+            continue
+        for w in data.get("results", []):
+            title = w.get("title") or ""
+            url, arxiv_id = None, None
+            for loc in (w.get("locations") or []):
+                for key in ("landing_page_url", "pdf"):
+                    u = loc.get(key) or ""
+                    m = re.search(r"arxiv\.org/(?:abs|pdf)/([0-9]+\.[0-9]+)", u)
+                    if m:
+                        arxiv_id = m.group(1)
+                        url = f"https://arxiv.org/abs/{arxiv_id}"
+                        break
+                if url:
+                    break
+            if not url:
+                doi = (w.get("ids") or {}).get("doi")
+                url = doi or ""
+                if not url:
+                    continue  # 没有链接的论文跳过
+            pub = w.get("publication_date") or ""
+            out.append({
+                "id": f"arxiv:{arxiv_id}" if arxiv_id else f"oa:{(w.get('id') or '').split('/')[-1]}",
+                "title": title,
+                "authors": [a.get("author", {}).get("display_name")
+                            for a in (w.get("authorships") or [])][:5],
+                "url": url,
+                "abstract": _oa_abstract(w.get("abstract_inverted_index")),
+                "published": pub,
+                "source": "OpenAlex",
+            })
+        time.sleep(1)  # OpenAlex 礼貌池也建议稍作间隔
+    return out
+
+
 # ---------------------------------------------------------------- arXiv
 def _arxiv_id(raw):
     m = re.search(r"abs/([0-9]+\.[0-9]+)", raw)
     return m.group(1) if m else raw
 
 
-def fetch_arxiv(queries, cats, max_results):
-    base = "https://export.arxiv.org/api/query"  # 用 https
+def fetch_arxiv(search_queries, cats, max_results):
+    """search_queries: 已拼好的完整查询片段列表（每个对应一个分类）。"""
+    base = "https://export.arxiv.org/api/query"
     out = []
     catf = "+OR+".join(f"cat:{c}" for c in cats)
-    for q in queries:
-        params = {"search_query": f"({catf}) AND (abs:{q} OR ti:{q})",
+    for frag in search_queries:
+        params = {"search_query": f"({catf}) AND ({frag})",
                   "start": 0, "max_results": max_results,
                   "sortBy": "submittedDate", "sortOrder": "descending"}
-        try:
-            r = http_get(base, params=params)
-        except Exception as e:
-            log(f"arXiv 失败 ({q}): {e}")
+        entries = []
+        # arXiv 有时返回 200 空 feed（静默限流），对 0 结果额外重试
+        for _ in range(3):
+            try:
+                r = http_get(base, params=params)
+            except Exception as e:
+                log(f"arXiv 失败 ({frag[:40]}): {e}")
+                entries = None
+                break
+            entries = re.findall(r"<entry>(.*?)</entry>", r.text, re.S)
+            if entries:
+                break
+            log(f"arXiv 空 feed（疑似限流），重试 {frag[:30]}")
+            time.sleep(5)
+        if entries is None:
             continue
-        for e in re.findall(r"<entry>(.*?)</entry>", r.text, re.S):
+        for e in entries:
+            if "<title>Error</title>" in e:
+                continue
             pid = _arxiv_id(re.search(r"<id>(.*?)</id>", e).group(1))
             title = re.sub(r"\s+", " ", re.search(r"<title>(.*?)</title>", e, re.S).group(1)).strip()
             abstract = re.sub(r"\s+", " ", re.search(r"<summary>(.*?)</summary>", e, re.S).group(1)).strip()
@@ -116,10 +197,11 @@ def fetch_s2(queries, limit, api_key=None):
         try:
             r = http_get(base, params={"query": q, "limit": limit, "fields": fields},
                          headers=headers, timeout=45)
+            data = r.json()
         except Exception as e:
-            log(f"S2 失败 ({q}): {e}")
+            log(f"S2 失败 ({q[:40]}): {e}")
             continue
-        for d in r.json().get("data", []):
+        for d in data.get("data", []):
             doi = (d.get("externalIds") or {}).get("DOI")
             pid = f"doi:{doi}" if doi else f"s2:{d.get('paperId')}"
             pub = d.get("publicationDate") or ""
@@ -144,7 +226,10 @@ def classify(paper, categories):
 def already_in_readme(p, text):
     if p["url"] and p["url"] in text:
         return True
-    return p["id"].split(":", 1)[1] in text
+    if p["id"].split(":", 1)[1] in text:
+        return True
+    # 跨源去重：标题也比对（OpenAlex 与 arXiv 可能同源不同链接）
+    return norm_title(p["title"]) in text
 
 
 def year_of(p):
@@ -152,10 +237,8 @@ def year_of(p):
 
 
 def row_for(cat, p):
-    return cat["row_template"].format(
-        title=p["title"], url=p["url"],
-        venue="arXiv" if p["source"] == "arXiv" else "Preprint",
-        year=year_of(p))
+    venue = "arXiv" if "arxiv.org" in (p.get("url") or "") else "Preprint"
+    return cat["row_template"].format(title=p["title"], url=p["url"], venue=venue, year=year_of(p))
 
 
 # --------------------------------------------------- 定位目标表格最后一行
@@ -218,21 +301,33 @@ def main():
     categories = cfg.get("categories", [])
     sources = cfg.get("sources", {})
 
+    # 每个分类生成查询：OpenAlex 用关键词拼接；arXiv 用 OR 组合（一个分类一次请求）
+    oa_queries = [" ".join(c.get("keywords", [])) for c in categories]
+    arxiv_frags = [" OR ".join(f"(abs:{k} OR ti:{k})" for k in c.get("keywords", []))
+                   for c in categories]
+
     allp = []
-    if "arxiv" in sources:
+    if sources.get("openalex", {}).get("enabled", True):
+        o = sources["openalex"]
+        allp += fetch_openalex(oa_queries, since_str,
+                               o.get("mailto", "paper-tracker@example.com"),
+                               o.get("per_page", 50))
+    if sources.get("arxiv", {}).get("enabled", True):
         a = sources["arxiv"]
-        q = [x for c in categories for x in c.get("arxiv_queries", c.get("keywords", []))]
-        allp += fetch_arxiv(q, a.get("categories", ["cs.CV", "cs.AI", "cs.MM", "cs.RO"]),
+        allp += fetch_arxiv(arxiv_frags, a.get("categories", ["cs.CV", "cs.AI", "cs.MM", "cs.RO"]),
                             a.get("max_results", 40))
-    if sources.get("semantic_scholar", {}).get("enabled", True):
+    if sources.get("semantic_scholar", {}).get("enabled", False):
         s = sources["semantic_scholar"]
         q = [x for c in categories for x in c.get("s2_queries", c.get("keywords", []))]
         s2_key = os.environ.get("S2_API_KEY", s.get("api_key"))
         allp += fetch_s2(q, s.get("limit", 40), api_key=s2_key)
 
+    # 跨源去重（按标题）
     seen = {}
     for p in allp:
-        seen.setdefault(p["id"], p)
+        key = norm_title(p["title"])
+        if key and key not in seen:
+            seen[key] = p
     papers = [p for p in seen.values()
               if not p["published"] or p["published"] >= since_str]
     log(f"近 {lookback} 天候选: {len(papers)} 篇")

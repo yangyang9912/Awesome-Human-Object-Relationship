@@ -9,43 +9,45 @@ lookback_days: 30
 categories:
   - name: "Gaze Object Prediction (GOP)"
     keywords: ["gaze object prediction", "gaze target object", "what object is being looked at"]
-    arxiv_queries: ["gaze object prediction"]
-    s2_queries: ["gaze object prediction"]
     target_summary: "Location-required GOP"        # 插入到该 <details> 表格
     row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
 
   - name: "Human-Gaze-Target Recognition"
     keywords: ["gaze target", "gaze following", "gaze estimation", "gaze prediction"]
-    arxiv_queries: ["gaze target", "gaze following"]
-    s2_queries: ["gaze target recognition"]
     target_summary: "Fusion-based"
     row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
 
   - name: "Human-Object Interaction Detection"
     keywords: ["human-object interaction", "hoi detection", "human object interaction"]
-    arxiv_queries: ["human-object interaction", "HOI detection"]
-    s2_queries: ["human-object interaction detection"]
     target_summary: "Proposal / pairwise feature fusion"   # 该表是 4 列（含 Code）
     row_template: "| [{title}]({url}) | {venue} | {year} | — |"  # 4 列，Code 填 —
 
   - name: "Vision-Language / Foundation Model"
     keywords: ["vision-language", "vision language", "foundation model", "large multimodal", "vlm"]
-    arxiv_queries: ["vision-language", "foundation model"]
-    s2_queries: ["vision language model"]
     target_summary: "Vision-language modeling"   # 该表是 4 列（含 Code）
     row_template: "| [{title}]({url}) | {venue} | {year} | — |"
 
   - name: "Auxiliary & Applications"
     keywords: ["gaze", "human interaction", "robot", "healthcare", "education", "behavior understanding"]
-    arxiv_queries: ["gaze", "human interaction"]
-    s2_queries: ["human behavior understanding"]
     target_summary: "Training Efficiency, Robustness, and Annotation"
     row_template: "| [{title}]({url}) | {venue} | {year} |"   # 3 列
 
+# ------------------------------------------------------------
+# 数据源（全部免费、无需密钥即可跑）
+#   1) openalex  —— 主源：覆盖 arXiv 预印本 + 会议/期刊，限额宽松（polite pool）
+#   2) arxiv    —— 兜底源：best-effort，对 429 / 空 feed 静默限流做重试
+#   3) semantic_scholar —— 可选：免费额度很低，建议配 S2_API_KEY 后再开
+# ------------------------------------------------------------
 sources:
+  openalex:
+    enabled: true
+    mailto: "paper-tracker@example.com"   # 换成你的邮箱可进 polite pool（更高限额）
+    per_page: 50
   arxiv:
+    enabled: true
     categories: ["cs.CV", "cs.AI", "cs.MM", "cs.RO"]
     max_results: 40
   semantic_scholar:
-    enabled: true
+    enabled: false                        # 默认关；要用的话去 https://www.semanticscholar.org/product/api 申请免费 key
     limit: 40
+    # api_key: ""                         # 或运行时设置仓库 Secrets: S2_API_KEY
