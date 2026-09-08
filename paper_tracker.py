@@ -9,6 +9,7 @@ paper-tracker: 自动检索 + 自动开 PR（无需手动粘贴）
 
 依赖: requests, pyyaml
 环境变量: GITHUB_TOKEN, GITHUB_REPOSITORY
+          S2_API_KEY（可选，提高 Semantic Scholar 限额）
 未设置 GITHUB_TOKEN 时进入「调试模式」，只改本地 README 草稿、不提交。
 """
 import os
@@ -22,6 +23,9 @@ import requests
 CONFIG_PATH = os.environ.get("CONFIG_PATH", "config.yaml")
 README_PATH = os.environ.get("README_PATH", "README.md")
 API_BASE = "https://api.github.com"
+
+# arXiv 官方要求：User-Agent 必带；且建议 < 1 请求/3 秒
+UA = "paper-tracker-bot/1.0 (github.com/yangyang9912/Awesome-Human-Centered-Relationship)"
 
 
 def log(m):
@@ -37,6 +41,39 @@ def load_config():
         return yaml.safe_load(f)
 
 
+# ----------------------------------------------------------- HTTP helper
+def http_get(url, params=None, headers=None, timeout=45, max_retries=4):
+    """带 User-Agent、指数退避重试的 GET。
+
+    对 429 / 5xx / 超时重试（退避 3→6→12→24→60s），其余 4xx 直接抛错。
+    """
+    h = {"User-Agent": UA}
+    if headers:
+        h.update(headers)
+    delay = 3
+    for attempt in range(max_retries + 1):
+        try:
+            r = requests.get(url, params=params, headers=h, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            if attempt >= max_retries:
+                raise
+            log(f"请求异常（{e}），{delay}s 后重试")
+            time.sleep(delay)
+            delay = min(delay * 2, 60)
+            continue
+        if r.status_code == 200:
+            return r
+        if attempt >= max_retries:
+            r.raise_for_status()
+        if r.status_code in (429, 500, 502, 503, 504):
+            log(f"服务端限流/错误 {r.status_code}，{delay}s 后重试")
+            time.sleep(delay)
+            delay = min(delay * 2, 60)
+            continue
+        r.raise_for_status()  # 其它 4xx 直接失败，不重试
+    raise RuntimeError("重试耗尽")
+
+
 # ---------------------------------------------------------------- arXiv
 def _arxiv_id(raw):
     m = re.search(r"abs/([0-9]+\.[0-9]+)", raw)
@@ -44,7 +81,7 @@ def _arxiv_id(raw):
 
 
 def fetch_arxiv(queries, cats, max_results):
-    base = "http://export.arxiv.org/api/query"
+    base = "https://export.arxiv.org/api/query"  # 用 https
     out = []
     catf = "+OR+".join(f"cat:{c}" for c in cats)
     for q in queries:
@@ -52,8 +89,7 @@ def fetch_arxiv(queries, cats, max_results):
                   "start": 0, "max_results": max_results,
                   "sortBy": "submittedDate", "sortOrder": "descending"}
         try:
-            r = requests.get(base, params=params, timeout=30)
-            r.raise_for_status()
+            r = http_get(base, params=params)
         except Exception as e:
             log(f"arXiv 失败 ({q}): {e}")
             continue
@@ -66,19 +102,20 @@ def fetch_arxiv(queries, cats, max_results):
             out.append({"id": f"arxiv:{pid}", "title": title, "authors": authors[:5],
                         "url": f"https://arxiv.org/abs/{pid}", "abstract": abstract,
                         "published": pub, "source": "arXiv"})
-        time.sleep(1.5)
+        time.sleep(3)  # arXiv 建议 < 1 请求/3 秒
     return out
 
 
 # ---------------------------------------------------------- Semantic Scholar
-def fetch_s2(queries, limit):
+def fetch_s2(queries, limit, api_key=None):
     base = "https://api.semanticscholar.org/graph/v1/paper/search"
     fields = "title,abstract,authors,year,publicationDate,externalIds,url"
+    headers = {"x-api-key": api_key} if api_key else {}
     out = []
     for q in queries:
         try:
-            r = requests.get(base, params={"query": q, "limit": limit, "fields": fields}, timeout=30)
-            r.raise_for_status()
+            r = http_get(base, params={"query": q, "limit": limit, "fields": fields},
+                         headers=headers, timeout=45)
         except Exception as e:
             log(f"S2 失败 ({q}): {e}")
             continue
@@ -91,7 +128,7 @@ def fetch_s2(queries, limit):
                         "url": d.get("url") or (f"https://doi.org/{doi}" if doi else ""),
                         "abstract": d.get("abstract") or "", "published": pub,
                         "source": "SemanticScholar"})
-        time.sleep(1)
+        time.sleep(3)  # S2 免费额度很低，放慢节奏
     return out
 
 
@@ -190,7 +227,8 @@ def main():
     if sources.get("semantic_scholar", {}).get("enabled", True):
         s = sources["semantic_scholar"]
         q = [x for c in categories for x in c.get("s2_queries", c.get("keywords", []))]
-        allp += fetch_s2(q, s.get("limit", 40))
+        s2_key = os.environ.get("S2_API_KEY", s.get("api_key"))
+        allp += fetch_s2(q, s.get("limit", 40), api_key=s2_key)
 
     seen = {}
     for p in allp:
